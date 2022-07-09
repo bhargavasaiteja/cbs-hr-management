@@ -19,7 +19,7 @@ public class PayrollProcess {
     @PostMapping("/payrollProcess")
     public ResponseEntity<String> payrollProcess(@RequestBody PayslipDTO payslipDTO) {
 
-String status =paySlipService.payrollService(payslipDTO.getNoofdays(),payslipDTO.getNoofworkingdays(),payslipDTO.getCalculatedctc());
+        String status = paySlipService.payrollService(payslipDTO);
         return new ResponseEntity<>(status, HttpStatus.OK);
     }
 
