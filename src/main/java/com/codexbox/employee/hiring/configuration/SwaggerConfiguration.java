@@ -1,4 +1,4 @@
-package com.codexbox.employee_hiring.configuration;
+package com.codexbox.employee.hiring.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
