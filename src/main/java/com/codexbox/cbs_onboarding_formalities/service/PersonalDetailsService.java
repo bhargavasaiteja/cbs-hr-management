@@ -1,10 +1,9 @@
 package com.codexbox.cbs_onboarding_formalities.service;
 
-import com.codexbox.cbs_onboarding_formalities.model.PersonalDetailsDTO;
+import com.codexbox.cbs_onboarding_formalities.models.PersonalDetailsDTO;
 import org.springframework.stereotype.Service;
 
 @Service
 public interface PersonalDetailsService  {
-
-     void details(PersonalDetailsDTO personaldetailsDTO);
+  String details(PersonalDetailsDTO personaldetailsDTO);
 }

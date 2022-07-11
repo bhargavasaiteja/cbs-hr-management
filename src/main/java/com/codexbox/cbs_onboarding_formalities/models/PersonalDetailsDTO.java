@@ -1,18 +1,16 @@
-package com.codexbox.cbs_onboarding_formalities.model;
+package com.codexbox.cbs_onboarding_formalities.models;
 
 import lombok.Data;
-import org.springframework.context.annotation.Configuration;
 
 @Data
-@Configuration
 public class PersonalDetailsDTO {
 
 
-    private Long id;
+    private int id;
 
-    private  String pancard;
+    private String pancard;
 
-    private String Aadharcard;
+    private Long aadharcard;
 
     private String currentaddress;
 
@@ -26,11 +24,11 @@ public class PersonalDetailsDTO {
 
     private String personalemailid;
 
-    private String mobilenumber;
+    private long mobilenumber;
 
-    private String emergencycontactnumber;
+    private long emergencycontactnumber;
 
-    private String bankaccount;
+    private Long bankaccount;
 
     private String bloodgroup;
 
@@ -45,8 +43,5 @@ public class PersonalDetailsDTO {
     private String children1;
 
     private String children2;
-
-
-
 
 }
