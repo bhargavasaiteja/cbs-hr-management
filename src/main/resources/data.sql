@@ -10,4 +10,3 @@ insert into Department values(1,"Management");
 insert into Department values(2,"Fianance");
 insert into Department values(3,"Sales");
 insert into Department values(4,"Projects");
-select *from Department;
