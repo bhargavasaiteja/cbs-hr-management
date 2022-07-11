@@ -1,8 +1,8 @@
 package com.codexbox.employee.hiring.employeeHiring.controller;
 
-import com.codexbox.employee.hiring.employeeHiring.entities.ProfileEntity;
-import com.codexbox.employee.hiring.employeeHiring.entities.StatusEntity;
 import com.codexbox.employee.hiring.employeeHiring.models.EmployeeHiringModel;
+import com.codexbox.employee.hiring.employeeHiring.models.ProfileModel;
+import com.codexbox.employee.hiring.employeeHiring.models.StatusModel;
 import com.codexbox.employee.hiring.employeeHiring.services.EmployeeHiringServices;
 import com.codexbox.employee.hiring.employeeHiring.services.ProfileService;
 import com.codexbox.employee.hiring.employeeHiring.services.StatusService;
@@ -25,15 +25,15 @@ public class EmployeeHiringController {
     @Autowired
     private StatusService statusService;
 
-    @GetMapping("/EmployeeHiringProfile")
-    public ResponseEntity<List<ProfileEntity>> getProfilesStatus() {
+    @GetMapping("/employeeHiringProfiles")
+    public ResponseEntity<List<ProfileModel>> getProfilesStatus() {
         return new ResponseEntity<>(profileService.getProfileDetails(),HttpStatus.OK);
     }
-    @GetMapping("/EmployeeHiringStatus")
-    public ResponseEntity<List<StatusEntity>> getStatus() {
+    @GetMapping("/employeeHiringStatus")
+    public ResponseEntity <List<StatusModel>> getSelectStatus() {
         return new ResponseEntity<>(statusService.getStatusDetails(), HttpStatus.OK);
     }
-    @PostMapping("/EmployeeHiringSubmit")
+    @PostMapping("/employeeHiringSubmit")
     public ResponseEntity<EmployeeHiringModel> submitHiringDetails(@RequestBody EmployeeHiringModel employeeHiringModel) {
       String saveDetails = employeeHiringServices.saveSubmitDetails(employeeHiringModel);
         return new ResponseEntity(saveDetails, HttpStatus.OK);
