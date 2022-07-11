@@ -7,7 +7,8 @@ import lombok.Data;
 public class TimesheetDTO {
 
 
-    // private int empId;
+    private  Integer empId;
+
     private String loginTime;
 
     private String logoutime;
@@ -23,6 +24,4 @@ public class TimesheetDTO {
     private String leavesManagement;
 
 
-    public TimesheetDTO(Object timeSheet) {
-    }
 }

@@ -14,11 +14,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class HrTimesheetController {
     @Autowired
     private HrTimeSheetService hrTimeSheetService;
+    public TimesheetDTO service;
 
 
-    @PostMapping
-    public ResponseEntity<String> createTimeSheet(@RequestBody TimesheetDTO timesheetDTO) {
-        return new ResponseEntity("Success",  HttpStatus.CREATED);
+    @PostMapping("/timesheet")
+    public ResponseEntity<String> TimesheetDTO(@RequestBody TimesheetDTO timesheetDTO) {
+String status= hrTimeSheetService.hrTimeSheetService(timesheetDTO);
+        return new ResponseEntity(status,  HttpStatus.CREATED);
     }
 
 
