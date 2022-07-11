@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @Data
-public class InsuranceDto implements java.io.Serializable{
-    private Integer id;
+public class InsuranceDTO {
+    private Integer insuranceId;
     private String insuranceDetails;
 }

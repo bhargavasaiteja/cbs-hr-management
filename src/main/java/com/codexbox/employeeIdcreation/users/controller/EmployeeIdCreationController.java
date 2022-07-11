@@ -3,6 +3,8 @@ package com.codexbox.employeeIdcreation.users.controller;
 import com.codexbox.employeeIdcreation.users.entities.BandEntity;
 import com.codexbox.employeeIdcreation.users.entities.CompanyMobileEntity;
 import com.codexbox.employeeIdcreation.users.entities.InsuranceEntity;
+import com.codexbox.employeeIdcreation.users.models.BandDTO;
+import com.codexbox.employeeIdcreation.users.models.InsuranceDTO;
 import com.codexbox.employeeIdcreation.users.services.BandService;
 import com.codexbox.employeeIdcreation.users.services.CompanyMobileService;
 import com.codexbox.employeeIdcreation.users.services.InsuranceServices;
@@ -26,11 +28,11 @@ public class EmployeeIdCreationController {
     CompanyMobileService companyMobileService;
 
     @GetMapping("/insuranceDetails")
-    public ResponseEntity<List<InsuranceEntity>> insuranceDropDown() {
+    public ResponseEntity<List<InsuranceDTO>> insuranceDropDown() {
         return new ResponseEntity(insuranceServices.insuranceServiceDropDown(), HttpStatus.OK);
     }
     @GetMapping("/bandName")
-    public ResponseEntity<List<BandEntity>> bandDropDown(){
+    public ResponseEntity<List<BandDTO>> bandDropDown(){
         return new ResponseEntity(bandService.bandDropDownService(), HttpStatus.OK);
     }
     @GetMapping("/companyMobile")
