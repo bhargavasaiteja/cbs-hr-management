@@ -1,4 +1,4 @@
-package com.codexbox.employeeIdcreation.repositry;
+package com.codexbox.employeeIdcreation.repository;
 
 import com.codexbox.employeeIdcreation.entity.EmpEntity;
 import org.springframework.data.repository.CrudRepository;
