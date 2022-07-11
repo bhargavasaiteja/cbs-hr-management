@@ -1,4 +1,4 @@
-package com.codexbox.employee.hiring.users.exceptions;
+package com.codexbox.employee.hiring.employeeHiring.exceptions;
 
 public class InvalidProfileException extends java.lang.RuntimeException{
 

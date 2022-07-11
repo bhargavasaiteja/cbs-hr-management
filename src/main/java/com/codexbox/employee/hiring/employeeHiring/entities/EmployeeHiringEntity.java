@@ -3,24 +3,19 @@ package com.codexbox.employee.hiring.employeeHiring.entities;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
-@Table(name = "hiring")
+@Table(name = "employee_hiring")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class EmployeeHiringEntity {
     @Id
-    @Column(name="id")
-    private Integer id;
-
-    @Column(name="profiles")
-    private String profiles;
+    @Column(name="profile_id")
+    private Integer profileId;
 
     @Column(name="zoom_or_googlemeet")
     private String zoomOrGoogleMeet;
@@ -31,8 +26,8 @@ public class EmployeeHiringEntity {
     @Column(name="designation")
     private String designation;
 
-    @Column(name="feed_back")
-    private String feedback;
+    @Column(name="status_id")
+    private Integer statusId;
 
     @Column(name="comments")
     private String comments;

@@ -24,12 +24,11 @@ public class EmployeeHiringServices {
             return status;
         }
         public void mappingMethod(EmployeeHiringModel model, EmployeeHiringEntity entity){
-        entity.setId(model.getId());
-        entity.setProfiles(model.getProfiles());
+        entity.setProfileId(model.getProfileId());
         entity.setZoomOrGoogleMeet(model.getZoomOrGoogleMeet());
         entity.setInterviewerName(model.getInterviewerName());
         entity.setDesignation(model.getDesignation());
-        entity.setFeedback(model.getFeedback());
+        entity.setProfileId(model.getProfileId());
         entity.setComments(model.getComments());
         }
     }
