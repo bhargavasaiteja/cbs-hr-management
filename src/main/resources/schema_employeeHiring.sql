@@ -11,7 +11,6 @@ interviewer_name varchar(255),
 designation varchar(255),
 status_id int,
 comments varchar(255),
- Primary Key(profile_id, status_id)
 );
 
 CREATE TABLE status_dropdown (
