@@ -12,17 +12,17 @@ import java.util.List;
 public class CompanyMobileService {
     @Autowired
     CompanyMobileRepo companyMobileRepo;
-    public List<CompanyMobileDTO> companyMobileDropDownService(){
+    public List<CompanyMobileDTO> companyMobileServiceDetails(){
         List<CompanyMobileEntity> companyMobileEntityList = (List<CompanyMobileEntity>) companyMobileRepo.findAll();
         List<CompanyMobileDTO> companyMobileDTOList = new ArrayList<>();
         companyMobileEntityList.forEach(companyMobileObj ->{
             CompanyMobileDTO companyMobileDTO = new CompanyMobileDTO();
-            mappingCompanyMobileDropDown(companyMobileDTO, companyMobileObj);
+            mappingCompanyMobileEntityAndDTO(companyMobileDTO, companyMobileObj);
             companyMobileDTOList.add(companyMobileDTO);
         } );
         return companyMobileDTOList;
     }
-    public void  mappingCompanyMobileDropDown(CompanyMobileDTO companyMobileDto, CompanyMobileEntity companyMobileEntity){
+    public void mappingCompanyMobileEntityAndDTO(CompanyMobileDTO companyMobileDto, CompanyMobileEntity companyMobileEntity){
         companyMobileDto.setCompanyMobileId(companyMobileEntity.getCompanyMobileId());
         companyMobileDto.setCompanyMobileStatus(companyMobileEntity.getCompanyMobileStatus());
     }

@@ -12,17 +12,17 @@ import java.util.List;
 public class BandService {
     @Autowired
     BandRepo bandRepo;
-    public List<BandDTO> bandDropDownService(){
+    public List<BandDTO> bandServiceDetails(){
         List<BandEntity> bandEntityList = (List<BandEntity>) bandRepo.findAll();
         List<BandDTO> bandDTOList = new ArrayList<>();
         bandEntityList.forEach(bandObj ->{
             BandDTO bandDTO = new BandDTO();
-            mappingBandDropDown(bandDTO,bandObj);
+            mappingBandModelAndEntity(bandDTO,bandObj);
             bandDTOList.add(bandDTO);
         });
         return bandDTOList;
     }
-    public void  mappingBandDropDown(BandDTO bandDto, BandEntity bandEntity){
+    public void mappingBandModelAndEntity(BandDTO bandDto, BandEntity bandEntity){
         bandDto.setBandId(bandEntity.getBandId());
         bandDto.setBandName(bandEntity.getBandName());
     }

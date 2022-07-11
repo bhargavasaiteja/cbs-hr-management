@@ -13,18 +13,18 @@ import java.util.List;
 public class InsuranceServices {
     @Autowired
     InsuranceRepo insuranceRepo;
-    public List<InsuranceDTO> insuranceServiceDropDown(){
+    public List<InsuranceDTO> insuranceServicedetails(){
      List<InsuranceEntity> insuranceEntityList = (List<InsuranceEntity>) insuranceRepo.findAll();
      List<InsuranceDTO> insuranceDTOList = new ArrayList<>();
      insuranceEntityList.forEach(insuranceObj -> {
          InsuranceDTO insuranceDTO = new InsuranceDTO();
-         mappingInsuranceDropDown(insuranceDTO, insuranceObj);
+         mappingInsuranceEntityAndDTO(insuranceDTO, insuranceObj);
          insuranceDTOList.add(insuranceDTO);
      });
      return insuranceDTOList;
     }
 
-    public void  mappingInsuranceDropDown(InsuranceDTO insuranceDto, InsuranceEntity insuranceEntity){
+    public void mappingInsuranceEntityAndDTO(InsuranceDTO insuranceDto, InsuranceEntity insuranceEntity){
         insuranceDto.setInsuranceId(insuranceEntity.getInsuranceId());
         insuranceDto.setInsuranceDetails(insuranceEntity.getInsuranceDetails());
     }

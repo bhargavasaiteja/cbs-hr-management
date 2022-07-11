@@ -1,8 +1,6 @@
 package com.codexbox.employeeIdcreation.users.controller;
 
-import com.codexbox.employeeIdcreation.users.entities.BandEntity;
 import com.codexbox.employeeIdcreation.users.entities.CompanyMobileEntity;
-import com.codexbox.employeeIdcreation.users.entities.InsuranceEntity;
 import com.codexbox.employeeIdcreation.users.models.BandDTO;
 import com.codexbox.employeeIdcreation.users.models.InsuranceDTO;
 import com.codexbox.employeeIdcreation.users.services.BandService;
@@ -28,15 +26,15 @@ public class EmployeeIdCreationController {
     CompanyMobileService companyMobileService;
 
     @GetMapping("/insuranceDetails")
-    public ResponseEntity<List<InsuranceDTO>> insuranceDropDown() {
-        return new ResponseEntity(insuranceServices.insuranceServiceDropDown(), HttpStatus.OK);
+    public ResponseEntity<List<InsuranceDTO>> insuranceController() {
+        return new ResponseEntity(insuranceServices.insuranceServicedetails(), HttpStatus.OK);
     }
     @GetMapping("/bandName")
-    public ResponseEntity<List<BandDTO>> bandDropDown(){
-        return new ResponseEntity(bandService.bandDropDownService(), HttpStatus.OK);
+    public ResponseEntity<List<BandDTO>> bandController(){
+        return new ResponseEntity(bandService.bandServiceDetails(), HttpStatus.OK);
     }
     @GetMapping("/companyMobile")
-    public ResponseEntity<List<CompanyMobileEntity>> companyMobileDropDown() {
-        return new ResponseEntity(companyMobileService.companyMobileDropDownService(), HttpStatus.OK);
+    public ResponseEntity<List<CompanyMobileEntity>> companyMobileController() {
+        return new ResponseEntity(companyMobileService.companyMobileServiceDetails(), HttpStatus.OK);
     }
 }
