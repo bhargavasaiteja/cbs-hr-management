@@ -9,19 +9,15 @@ public class TimesheetDTO {
 
     private  Integer empId;
 
-    private String loginTime;
+    private String logInTime;
 
-    private String logoutime;
+    private String logOutTime;
 
-    private Long totalHoursInWeek;
-
-    private Long totalHoursInMonth;
-
-    private Long numberOfworkingDaysInaWeek;
+    private Long numberOfWorkingDaysInWeek;
 
     private String holidaysOrClientCalender;
 
-    private String leavesManagement;
+
 
 
 }

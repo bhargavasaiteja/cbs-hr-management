@@ -1,12 +1,7 @@
 package com.Timesheet.timesheet.entities;
 
 
-import lombok.Data;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 
 @Table(name = "hr_timesheet_details")
@@ -14,70 +9,20 @@ import javax.persistence.Table;
 public class TimeSheetDetails {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "emp_Id")
     private int empId;
-    @Column(name = "logintime")
-    private String loginTime;
+    @Column(name = "login_time")
+    private String logInTime;
 
-   @Column(name = "logouttime")
-    private String logouttime;
+    @Column(name = "logout_time")
+    private String logOutTime;
 
-     @Column(name = "total_hours_in_a_week")
-    private Long totalHoursInWeek;
+    @Column(name = "number_of_working_days_in_month")
+    private Long numberOfWorkingDaysInWeek;
 
-     @Column(name = "total_hours_in_a_month")
-    private Long totalHoursInMonth;
-
-     @Column(name = "number_of_working_days_in_month")
-    private Long numberOfworkingDaysInaWeek;
-
-     @Column(name = "holidays_or_client_management")
+    @Column(name = "holidays_or_client_management")
     private String holidaysOrClientCalender;
-
-     @Column(name = "leaves_managment")
-     private  String leavesManagement;
-
-
-
-    public String getLoginTime() {
-        return loginTime;
-    }
-
-    public void setLoginTime(String loginTime) {
-        this.loginTime = loginTime;
-    }
-
-    public String getLogouttime() {
-        return logouttime;
-    }
-
-    public void setLogouttime(String logouttime) {
-        this.logouttime = logouttime;
-    }
-
-    public Long getTotalHoursInWeek() {
-        return totalHoursInWeek;
-    }
-
-    public void setTotalHoursInWeek(Long totalHoursInWeek) {
-        this.totalHoursInWeek = totalHoursInWeek;
-    }
-
-    public Long getTotalHoursInMonth() {
-        return totalHoursInMonth;
-    }
-
-    public void setTotalHoursInMonth(Long totalHoursInMonth) {
-        this.totalHoursInMonth = totalHoursInMonth;
-    }
-
-    public Long getNumberOfworkingDaysInaWeek() {
-        return numberOfworkingDaysInaWeek;
-    }
-
-    public void setNumberOfworkingDaysInaWeek(Long numberOfworkingDaysInaWeek) {
-        this.numberOfworkingDaysInaWeek = numberOfworkingDaysInaWeek;
-    }
 
     public String getHolidaysOrClientCalender() {
         return holidaysOrClientCalender;
@@ -87,13 +32,36 @@ public class TimeSheetDetails {
         this.holidaysOrClientCalender = holidaysOrClientCalender;
     }
 
-    public String getLeavesManagement() {
-        return leavesManagement;
+
+
+    public String getLogInTime() {
+        return logInTime;
     }
 
-    public void setLeavesManagement(String leavesManagement) {
-        this.leavesManagement = leavesManagement;
+    public void setLogInTime(String logInTime) {
+        this.logInTime = logInTime;
     }
+
+    public String getLogOutTime() {
+        return logOutTime;
+    }
+
+    public void setLogOutTime(String logOutTime) {
+        this.logOutTime = logOutTime;
+    }
+
+
+
+
+    public Long getNumberOfWorkingDaysInWeek() {
+        return numberOfWorkingDaysInWeek;
+    }
+
+    public void setNumberOfWorkingDaysInWeek(Long numberOfWorkingDaysInWeek) {
+        this.numberOfWorkingDaysInWeek = numberOfWorkingDaysInWeek;
+    }
+
+
 
     public int getEmpId() {
         return empId;
