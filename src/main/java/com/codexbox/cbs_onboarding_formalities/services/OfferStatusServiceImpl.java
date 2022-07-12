@@ -1,4 +1,4 @@
-package com.codexbox.cbs_onboarding_formalities.service;
+package com.codexbox.cbs_onboarding_formalities.services;
 
 import com.codexbox.cbs_onboarding_formalities.entities.OfferStatusEntity;
 import com.codexbox.cbs_onboarding_formalities.models.OfferStatusDTO;

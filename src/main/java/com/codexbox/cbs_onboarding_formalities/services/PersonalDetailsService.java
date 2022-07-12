@@ -1,4 +1,4 @@
-package com.codexbox.cbs_onboarding_formalities.service;
+package com.codexbox.cbs_onboarding_formalities.services;
 
 import com.codexbox.cbs_onboarding_formalities.models.PersonalDetailsDTO;
 import org.springframework.stereotype.Service;

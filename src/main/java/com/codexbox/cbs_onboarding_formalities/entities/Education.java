@@ -9,56 +9,56 @@ import javax.persistence.Table;
 @Table(name="education_details")
 public class Education {
     @Id
-    private int id;
+    private Integer id;
 
     @Column(name="ssc_Percentage")
-    private float sscPercentage;
+    private Float sscPercentage;
 
     @Column(name="intermediate_Percentage")
-    private float intermediatePercentage;
+    private Float intermediatePercentage;
 
     @Column(name="intermediate_specialization")
     private String intermediateSpecialization;
 
     @Column(name="UG_percentage")
-    private String ugPercentage;
+    private Float ugPercentage;
 
     @Column(name="UG_specialization")
-    private String ugSpecialzation;
+    private String ugSpecialization;
 
     @Column(name="PG_percentage")
-    private String pgPercentage;
+    private Float pgPercentage;
 
     @Column(name="PG_specialization")
-    private String pgSpecialzation;
+    private String pgSpecialization;
 
     @Column(name="Dr_percentage")
-    private String drPercentage;
+    private Float drPercentage;
 
-    @Column(name="Dr_speccialization")
-    private String drSpecialzation;
+    @Column(name="Dr_specialization")
+    private String drSpecialization;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public float getSscPercentage() {
+    public Float getSscPercentage() {
         return sscPercentage;
     }
 
-    public void setSscPercentage(float sscPercentage) {
+    public void setSscPercentage(Float sscPercentage) {
         this.sscPercentage = sscPercentage;
     }
 
-    public float getIntermediatePercentage() {
+    public Float getIntermediatePercentage() {
         return intermediatePercentage;
     }
 
-    public void setIntermediatePercentage(float intermediatePercentage) {
+    public void setIntermediatePercentage(Float intermediatePercentage) {
         this.intermediatePercentage = intermediatePercentage;
     }
 
@@ -70,51 +70,51 @@ public class Education {
         this.intermediateSpecialization = intermediateSpecialization;
     }
 
-    public String getUgPercentage() {
+    public Float getUgPercentage() {
         return ugPercentage;
     }
 
-    public void setUgPercentage(String ugPercentage) {
+    public void setUgPercentage(Float ugPercentage) {
         this.ugPercentage = ugPercentage;
     }
 
-    public String getUgSpecialzation() {
-        return ugSpecialzation;
+    public String getUgSpecialization() {
+        return ugSpecialization;
     }
 
-    public void setUgSpecialzation(String ugSpecialzation) {
-        this.ugSpecialzation = ugSpecialzation;
+    public void setUgSpecialization(String ugSpecialization) {
+        this.ugSpecialization = ugSpecialization;
     }
 
-    public String getPgPercentage() {
+    public Float getPgPercentage() {
         return pgPercentage;
     }
 
-    public void setPgPercentage(String pgPercentage) {
+    public void setPgPercentage(Float pgPercentage) {
         this.pgPercentage = pgPercentage;
     }
 
-    public String getPgSpecialzation() {
-        return pgSpecialzation;
+    public String getPgSpecialization() {
+        return pgSpecialization;
     }
 
-    public void setPgSpecialzation(String pgSpecialzation) {
-        this.pgSpecialzation = pgSpecialzation;
+    public void setPgSpecialization(String pgSpecialization) {
+        this.pgSpecialization = pgSpecialization;
     }
 
-    public String getDrPercentage() {
+    public Float getDrPercentage() {
         return drPercentage;
     }
 
-    public void setDrPercentage(String drPercentage) {
+    public void setDrPercentage(Float drPercentage) {
         this.drPercentage = drPercentage;
     }
 
-    public String getDrSpecialzation() {
-        return drSpecialzation;
+    public String getDrSpecialization() {
+        return drSpecialization;
     }
 
-    public void setDrSpecialzation(String drSpecialzation) {
-        this.drSpecialzation = drSpecialzation;
+    public void setDrSpecialization(String drSpecialization) {
+        this.drSpecialization = drSpecialization;
     }
 }
