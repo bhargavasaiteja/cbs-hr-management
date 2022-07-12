@@ -1,5 +1,6 @@
 package com.codexbox.employeeIdcreation.service;
 
+import com.codexbox.employeeIdcreation.entity.CompanyMobileEntity;
 import com.codexbox.employeeIdcreation.entity.ProjectEntity;
 import com.codexbox.employeeIdcreation.model.CompanyMobileDTO;
 import com.codexbox.employeeIdcreation.repository.CompanyMobileRepo;
@@ -13,7 +14,7 @@ public class CompanyMobileService {
     @Autowired
     CompanyMobileRepo companyMobileRepo;
     public List<CompanyMobileDTO> companyMobileServiceDetails(){
-        List<ProjectEntity.CompanyMobileEntity> companyMobileEntityList = (List<ProjectEntity.CompanyMobileEntity>) companyMobileRepo.findAll();
+        List<CompanyMobileEntity> companyMobileEntityList = (List<CompanyMobileEntity>) companyMobileRepo.findAll();
         List<CompanyMobileDTO> companyMobileDTOList = new ArrayList<>();
         companyMobileEntityList.forEach(companyMobileObj ->{
             CompanyMobileDTO companyMobileDTO = new CompanyMobileDTO();
@@ -22,7 +23,7 @@ public class CompanyMobileService {
         } );
         return companyMobileDTOList;
     }
-    public void mappingCompanyMobileEntityAndDTO(CompanyMobileDTO companyMobileDto, ProjectEntity.CompanyMobileEntity companyMobileEntity){
+    public void mappingCompanyMobileEntityAndDTO(CompanyMobileDTO companyMobileDto, CompanyMobileEntity companyMobileEntity){
         companyMobileDto.setCompanyMobileId(companyMobileEntity.getCompanyMobileId());
         companyMobileDto.setCompanyMobileStatus(companyMobileEntity.getCompanyMobileStatus());
     }

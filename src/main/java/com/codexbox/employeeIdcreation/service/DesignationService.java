@@ -19,8 +19,8 @@ public class DesignationService {
     public DesignationRepository designationRepository;
 
     public List<DesignationDTO> getdesignation() {
-        List<DesignationDTO> designationEntityList = new ArrayList<>();
         List<DesignationEntity> list = (List<DesignationEntity>)designationRepository.findAll();
+        List<DesignationDTO> designationEntityList = new ArrayList<>();
         list.forEach(designationEntity ->{
             DesignationDTO designationDTO = new DesignationDTO();
             mapModelToEntity(designationEntity,designationDTO);

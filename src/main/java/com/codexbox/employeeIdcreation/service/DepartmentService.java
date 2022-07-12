@@ -15,8 +15,8 @@ public class DepartmentService {
     public DepartmentRepo repo;
 @Transactional
     public List<DepartmentDTO> department() {
-        List<DepartmentDTO> departDTOList = new ArrayList();
-        List<DepartmentEntity> entityList = (List<DepartmentEntity>) repo.findAll();
+    List<DepartmentEntity> entityList = (List<DepartmentEntity>) repo.findAll();
+    List<DepartmentDTO> departDTOList = new ArrayList();
         entityList.forEach(entity->{
             DepartmentDTO departmentDTO = new DepartmentDTO();
             MapModelToDepartmentEntity(entity,departmentDTO);

@@ -3,14 +3,16 @@ package com.codexbox.employeeIdcreation.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "skill")
 public class SkillsEntity {
     @Id
-    @Column(name = "id")
+    @Column(name = "skill_id")
     private int id;
     @Column(name = "skills_name")
-    private String skillsname;
+    private String skillsName;
 
     public int getId() {
         return id;
@@ -20,11 +22,11 @@ public class SkillsEntity {
         this.id = id;
     }
 
-    public String getSkillsname() {
-        return skillsname;
+    public String getSkillsName() {
+        return skillsName;
     }
 
-    public void setSkillsname(String skillsname) {
-        this.skillsname = skillsname;
+    public void setSkillsName(String skillsName) {
+        this.skillsName = skillsName;
     }
 }

@@ -18,9 +18,8 @@ public class SkillsService {
 
     @Transactional
     public List<SkillsDTO> getskills() {
-
-        List<SkillsDTO> skillsDTOList = new ArrayList<>();
         List<SkillsEntity> skillsEntityList = (List<SkillsEntity>) skillsRepository.findAll();
+        List<SkillsDTO> skillsDTOList = new ArrayList<>();
         skillsEntityList.forEach(entity -> {
             SkillsDTO skillsDTO = new SkillsDTO();
             mapModelToSkillsEntity(entity,skillsDTO);
@@ -31,7 +30,7 @@ public class SkillsService {
 
     private void mapModelToSkillsEntity(SkillsEntity entity, SkillsDTO skillsDTO) {
         skillsDTO.setId(entity.getId());
-        skillsDTO.setSkillsName(entity.getSkillsname());
+        skillsDTO.setSkillsName(entity.getSkillsName());
     }
 
 

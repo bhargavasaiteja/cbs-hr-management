@@ -4,12 +4,12 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 @Entity
-@Table(name = "project_billing_status")
+@Table(name = "billing_status")
 public class BillingStatusEntity {
     @Id
-    @Column(name ="project_id ")
+    @Column(name ="billing_id")
     private Integer projectId;
-    @Column(name ="project_status")
+    @Column(name ="billing_status")
     private String projectStatus;
     public Integer getProjectId() {
         return projectId;
