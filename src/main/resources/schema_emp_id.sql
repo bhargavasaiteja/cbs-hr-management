@@ -1,5 +1,3 @@
-
-
 DROP TABLE IF EXISTS insurance;
 DROP TABLE IF EXISTS band;
 DROP TABLE IF EXISTS company_mobile;
