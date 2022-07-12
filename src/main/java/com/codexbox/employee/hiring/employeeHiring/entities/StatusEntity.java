@@ -1,9 +1,8 @@
 package com.codexbox.employee.hiring.employeeHiring.entities;
 import lombok.Data;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+
+import javax.persistence.*;
+
 @Entity
 @Table(name="status_dropdown")
 @Data
@@ -14,4 +13,5 @@ public class StatusEntity {
 
     @Column(name="select_status")
     private String selectStatus;
+
 }

@@ -10,10 +10,11 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class EmployeeHiringModel implements Serializable {
+    private Integer id;
     private Integer profileId;
     private String zoomOrGoogleMeet;
     private String interviewerName;
     private String designation;
-    private Integer status;
+    private Integer statusId;
     private String comments;
 }

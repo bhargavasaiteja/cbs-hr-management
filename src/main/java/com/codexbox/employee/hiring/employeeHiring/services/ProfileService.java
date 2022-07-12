@@ -5,6 +5,7 @@ import com.codexbox.employee.hiring.employeeHiring.models.ProfileModel;
 import com.codexbox.employee.hiring.employeeHiring.repositories.ProfileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.List;
 @Service

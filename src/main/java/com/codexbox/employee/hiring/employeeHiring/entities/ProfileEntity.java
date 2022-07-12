@@ -1,10 +1,12 @@
 package com.codexbox.employee.hiring.employeeHiring.entities;
 
 import lombok.Data;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
 @Entity
 @Table(name="profile_dropdown")
 @Data

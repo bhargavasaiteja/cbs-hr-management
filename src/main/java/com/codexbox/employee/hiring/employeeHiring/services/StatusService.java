@@ -1,9 +1,11 @@
 package com.codexbox.employee.hiring.employeeHiring.services;
+
 import com.codexbox.employee.hiring.employeeHiring.entities.StatusEntity;
 import com.codexbox.employee.hiring.employeeHiring.models.StatusModel;
 import com.codexbox.employee.hiring.employeeHiring.repositories.StatusRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.List;
 @Service
