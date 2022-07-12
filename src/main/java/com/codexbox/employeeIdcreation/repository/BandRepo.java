@@ -1,6 +1,6 @@
-package com.codexbox.employeeIdcreation.users.repository;
+package com.codexbox.employeeIdcreation.repository;
 
-import com.codexbox.employeeIdcreation.users.entities.BandEntity;
+import com.codexbox.employeeIdcreation.entity.BandEntity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

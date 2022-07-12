@@ -1,9 +1,0 @@
-create table Geo(id int PRIMARY KEY,country_name varchar(30));
-insert into Geo(id,country_name)values(1,'India');
-insert into Geo(id,country_name)values(2,'USA');
-insert into Geo(id,country_name)values(3,'UK');
-
-
-create table project(status_id int PRIMARY KEY,status_name varchar(30));
-insert into project(status_id,status_name)values(1,'Project ID');
-insert into project(status_id,status_name)values(2,'Work location');

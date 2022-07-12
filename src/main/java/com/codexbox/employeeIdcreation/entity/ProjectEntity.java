@@ -15,4 +15,32 @@ public class ProjectEntity {
    private Integer statusId;
     @Column(name="status_name")
     private String statusName;
+
+    @Entity
+    @Table(name="company_mobile")
+    public static class CompanyMobileEntity {
+        @Id
+        @Column(name = "company_mobile_id")
+        private Integer companyMobileId;
+        @Column(name="company_mobile_status")
+        private String companyMobileStatus;
+
+        public Integer getCompanyMobileId() {
+            return companyMobileId;
+        }
+
+        public void setCompanyMobileId(Integer companyMobileId) {
+            this.companyMobileId = companyMobileId;
+        }
+
+        public String getCompanyMobileStatus() {
+            return companyMobileStatus;
+        }
+
+        public void setCompanyMobileStatus(String companyMobileStatus) {
+            this.companyMobileStatus = companyMobileStatus;
+        }
+
+
+    }
 }

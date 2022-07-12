@@ -5,5 +5,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ProjectBillingStatusDTO {
     private Integer projectId;
-    private String projectStatus;
+    private String projectBillingStatus;
+
+
 }

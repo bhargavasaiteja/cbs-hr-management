@@ -1,8 +1,8 @@
-package com.codexbox.employeeIdcreation.users.services;
+package com.codexbox.employeeIdcreation.service;
 
-import com.codexbox.employeeIdcreation.users.entities.InsuranceEntity;
-import com.codexbox.employeeIdcreation.users.models.InsuranceDTO;
-import com.codexbox.employeeIdcreation.users.repository.InsuranceRepo;
+import com.codexbox.employeeIdcreation.entity.InsuranceEntity;
+import com.codexbox.employeeIdcreation.model.InsuranceDTO;
+import com.codexbox.employeeIdcreation.repository.InsuranceRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

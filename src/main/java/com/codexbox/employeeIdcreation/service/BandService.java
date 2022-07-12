@@ -1,8 +1,8 @@
-package com.codexbox.employeeIdcreation.users.services;
+package com.codexbox.employeeIdcreation.service;
 
-import com.codexbox.employeeIdcreation.users.entities.BandEntity;
-import com.codexbox.employeeIdcreation.users.models.BandDTO;
-import com.codexbox.employeeIdcreation.users.repository.BandRepo;
+import com.codexbox.employeeIdcreation.entity.BandEntity;
+import com.codexbox.employeeIdcreation.model.BandDTO;
+import com.codexbox.employeeIdcreation.repository.BandRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

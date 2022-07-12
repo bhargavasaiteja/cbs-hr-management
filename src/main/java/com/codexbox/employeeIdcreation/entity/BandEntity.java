@@ -1,4 +1,4 @@
-package com.codexbox.employeeIdcreation.users.entities;
+package com.codexbox.employeeIdcreation.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

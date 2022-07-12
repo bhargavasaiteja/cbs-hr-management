@@ -5,19 +5,20 @@ import com.codexbox.employeeIdcreation.repository.DepartmentRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
 import java.util.ArrayList;
 import java.util.List;
+
 @Service
-@Transactional
 public class DepartmentService {
     @Autowired
     public DepartmentRepo repo;
-    @Autowired
-    public DepartmentDTO departmentDTO;
+@Transactional
     public List<DepartmentDTO> department() {
-        List<DepartmentDTO> departDTOList = new ArrayList<>();
+        List<DepartmentDTO> departDTOList = new ArrayList();
         List<DepartmentEntity> entityList = (List<DepartmentEntity>) repo.findAll();
         entityList.forEach(entity->{
+            DepartmentDTO departmentDTO = new DepartmentDTO();
             MapModelToDepartmentEntity(entity,departmentDTO);
             departDTOList.add(departmentDTO);
         });

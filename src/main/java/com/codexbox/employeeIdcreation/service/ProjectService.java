@@ -1,6 +1,6 @@
 package com.codexbox.employeeIdcreation.service;
 import com.codexbox.employeeIdcreation.entity.ProjectEntity;
-import com.codexbox.employeeIdcreation.models.ProjectDTO;
+import com.codexbox.employeeIdcreation.model.ProjectDTO;
 import com.codexbox.employeeIdcreation.repository.ProjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

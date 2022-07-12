@@ -1,6 +1,6 @@
 package com.codexbox.employeeIdcreation.service;
 import com.codexbox.employeeIdcreation.entity.GeoEntity;
-import com.codexbox.employeeIdcreation.models.GeoDTO;
+import com.codexbox.employeeIdcreation.model.GeoDTO;
 import com.codexbox.employeeIdcreation.repository.CountryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
