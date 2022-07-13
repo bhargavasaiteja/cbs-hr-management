@@ -1,11 +1,11 @@
-package com.codexbox.employee.hiring.employeeHiring.controller;
+package com.codexbox.cbs_onboarding_formalities.controller;
 
-import com.codexbox.employee.hiring.employeeHiring.models.EmployeeHiringModel;
-import com.codexbox.employee.hiring.employeeHiring.models.ProfileModel;
-import com.codexbox.employee.hiring.employeeHiring.models.StatusModel;
-import com.codexbox.employee.hiring.employeeHiring.services.EmployeeHiringServices;
-import com.codexbox.employee.hiring.employeeHiring.services.ProfileService;
-import com.codexbox.employee.hiring.employeeHiring.services.StatusService;
+import com.codexbox.cbs_onboarding_formalities.models.EmployeeHiringModel;
+import com.codexbox.cbs_onboarding_formalities.models.ProfileModel;
+import com.codexbox.cbs_onboarding_formalities.models.StatusModel;
+import com.codexbox.cbs_onboarding_formalities.services.EmployeeHiringServices;
+import com.codexbox.cbs_onboarding_formalities.services.ProfileService;
+import com.codexbox.cbs_onboarding_formalities.services.StatusService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

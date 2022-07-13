@@ -1,8 +1,8 @@
-package com.codexbox.employee.hiring.employeeHiring.services;
+package com.codexbox.cbs_onboarding_formalities.services;
 
-import com.codexbox.employee.hiring.employeeHiring.entities.StatusEntity;
-import com.codexbox.employee.hiring.employeeHiring.models.StatusModel;
-import com.codexbox.employee.hiring.employeeHiring.repositories.StatusRepository;
+import com.codexbox.cbs_onboarding_formalities.entities.StatusEntity;
+import com.codexbox.cbs_onboarding_formalities.models.StatusModel;
+import com.codexbox.cbs_onboarding_formalities.repositories.StatusRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

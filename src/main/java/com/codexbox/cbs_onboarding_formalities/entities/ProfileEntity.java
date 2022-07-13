@@ -1,4 +1,4 @@
-package com.codexbox.employee.hiring.employeeHiring.entities;
+package com.codexbox.cbs_onboarding_formalities.entities;
 
 import lombok.Data;
 

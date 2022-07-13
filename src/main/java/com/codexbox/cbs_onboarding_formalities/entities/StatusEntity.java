@@ -1,7 +1,11 @@
-package com.codexbox.employee.hiring.employeeHiring.entities;
+package com.codexbox.cbs_onboarding_formalities.entities;
+
 import lombok.Data;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name="status_dropdown")

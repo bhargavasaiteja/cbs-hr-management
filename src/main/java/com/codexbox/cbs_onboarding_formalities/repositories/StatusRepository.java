@@ -1,6 +1,6 @@
-package com.codexbox.employee.hiring.employeeHiring.repositories;
+package com.codexbox.cbs_onboarding_formalities.repositories;
 
-import com.codexbox.employee.hiring.employeeHiring.entities.StatusEntity;
+import com.codexbox.cbs_onboarding_formalities.entities.StatusEntity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 @Repository
