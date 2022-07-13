@@ -1,6 +1,6 @@
-package com.Timesheet.timesheet.repositories;
+package com.codexbox.cbs_onboarding_formalities.repositories;
 
-import com.Timesheet.timesheet.entities.TimeSheetDetails;
+import com.codexbox.cbs_onboarding_formalities.entities.TimeSheetDetails;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,9 +1,9 @@
-package com.Timesheet.timesheet.service;
+package com.codexbox.cbs_onboarding_formalities.services;
 
 
-import com.Timesheet.timesheet.entities.TimeSheetDetails;
-import com.Timesheet.timesheet.model.TimesheetDTO;
-import com.Timesheet.timesheet.repositories.TimesheetRepository;
+import com.codexbox.cbs_onboarding_formalities.entities.TimeSheetDetails;
+import com.codexbox.cbs_onboarding_formalities.models.TimesheetDTO;
+import com.codexbox.cbs_onboarding_formalities.repositories.TimesheetRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,8 +1,8 @@
-package com.Timesheet.timesheet.controller;
+package com.codexbox.cbs_onboarding_formalities.controller;
 
 
-import com.Timesheet.timesheet.model.TimesheetDTO;
-import com.Timesheet.timesheet.service.HrTimeSheetService;
+import com.codexbox.cbs_onboarding_formalities.models.TimesheetDTO;
+import com.codexbox.cbs_onboarding_formalities.services.HrTimeSheetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

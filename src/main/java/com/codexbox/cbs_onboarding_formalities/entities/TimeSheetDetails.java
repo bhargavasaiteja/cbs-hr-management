@@ -1,4 +1,4 @@
-package com.Timesheet.timesheet.entities;
+package com.codexbox.cbs_onboarding_formalities.entities;
 
 
 import javax.persistence.*;

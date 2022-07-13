@@ -1,4 +1,4 @@
-package com.Timesheet.timesheet.model;
+package com.codexbox.cbs_onboarding_formalities.models;
 
 
 import lombok.Data;
