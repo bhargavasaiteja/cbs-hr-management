@@ -42,3 +42,16 @@ insert into company_mobile (company_mobile_id, company_mobile_status ) values (1
 insert into employee_details values(10001,"2021-05-11",87564534,5690,"codex" ,"14lpa","4years","yes",8754378,"8lpa","gadrlaravali@gmail.com","veeru","yes","shift B","yes","gadrlaravali@gmail.com","hyd");
 insert into employee_details values(10004,"2021-05-11",9536774,5670,"codex" ,"10lpa","5years","yes",96534356,"5lpa","gadrlaravali@gmail.com","veeru","yes","shift A","yes","gadrlaravali@gmail.com","hyd");
 insert into employee_details values(10007,"2021-05-11",6898659,5780,"codex" ,"14lpa","4years","yes",4587998,"9lpa","gadrlaravali@gmail.com","veeru","yes","shift C","yes","gadrlaravali@gmail.com","hyd");
+INSERT INTO profile_dropdown(profile_id,profile_source)
+VALUES (1,"Indeed"),
+	   (2,"LinkedIn"),
+       (3,"Naukri"),
+       (4,"Glassdoor"),
+       (5,"Monster"),
+       (6,"CareerBuilder"),
+       (7,"Others");
+
+INSERT INTO status_dropdown(status_id,select_status)
+VALUES (1,"Selected"),
+	   (2,"Rejected"),
+       (3,"Hold");
