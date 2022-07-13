@@ -14,6 +14,7 @@ DROP TABLE IF EXISTS skills;
 CREATE TABLE insurance (insurance_id int NOT NULL, insurance_details varchar(100) not null, PRIMARY KEY (id));
 CREATE TABLE band (band_id int NOT NULL, band_name varchar(50) not null, PRIMARY KEY (id));
 CREATE TABLE company_mobile (company_mobile_id int NOT NULL, company_mobile_status varchar(90) not null, PRIMARY KEY (id));
+
 create table billing_status(project_name varchar(50),project_id int PRIMARY KEY,project_status varchar(50));
 create table department(department_id int PRIMARY KEY,department_name varchar(30));
 create table geo(id int PRIMARY KEY,country_name varchar(30));
@@ -23,3 +24,23 @@ create table skills(id int PRIMARY KEY,skills_name varchar(50));
 CREATE TABLE insurance (insurance_id int NOT NULL, insurance_details varchar(100) not null, PRIMARY KEY (id));
 CREATE TABLE band (band_id int NOT NULL, band_name varchar(50) not null, PRIMARY KEY (id));
 CREATE TABLE company_mobile (company_mobile_id int NOT NULL, company_mobile_status varchar(90) not null, PRIMARY KEY (id));
+
+create table employee_details (
+emp_id bigint Primary Key,
+experience varchar(50),
+personal_email_id varchar(100) NOT NULL,
+work_email_id varchar(100) NOT NULL,
+mobile_number bigint UNIQUE KEY,
+current_ctc varchar(20),
+offered_ctc varchar(20),
+doj date NOT NULL,
+system_allocated varchar(10),
+reporting_manager varchar(50),
+bank_user_id bigint UNIQUE KEY,
+client_name varchar(50),
+client_code int,
+shift_timings varchar(50),
+shift_allowance int ,
+work_location varchar(50),
+location_allowance varchar(10)
+);

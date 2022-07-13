@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
@@ -32,6 +33,17 @@ public class EmployeeIdCreationController {
 
     @Autowired
     CompanyMobileService companyMobileService;
+    @Autowired
+    private EmpService empService;
+
+
+
+
+    @PostMapping("/employee")
+    public ResponseEntity<String> saveEmployeeDetails(@RequestBody EmpDTO empDTO) {
+        empDTO.setBankUserId(empDTO.getBankDTO());
+        return  new ResponseEntity<>(empService.saveEmployeeDetails(empDTO), HttpStatus.OK);
+    }
     @GetMapping("/billingStatus")
     public ResponseEntity< List<BillingStatusDTO>> getProjectData(@RequestBody BillingStatusDTO billingStatusDTO){
         return new ResponseEntity<>(billingService.getProjectDetails(), HttpStatus.OK);

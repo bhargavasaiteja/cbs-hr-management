@@ -38,3 +38,7 @@ insert into  billing_status values(104,"YTA project");
 insert into insurance (insurance_id, insurance_details) values (1, "company name"),(2, "amount"),(3, "insurance no");
 insert into band (band_id, band_name) values (1, "m1/e1"),(2, "m2/e2"),(3, "m3/e3");
 insert into company_mobile (company_mobile_id, company_mobile_status ) values (1, "allocated"),(2, "not allocated"),(3, "not applicable");
+
+insert into employee_details values(10001,"2021-05-11",87564534,5690,"codex" ,"14lpa","4years","yes",8754378,"8lpa","gadrlaravali@gmail.com","veeru","yes","shift B","yes","gadrlaravali@gmail.com","hyd");
+insert into employee_details values(10004,"2021-05-11",9536774,5670,"codex" ,"10lpa","5years","yes",96534356,"5lpa","gadrlaravali@gmail.com","veeru","yes","shift A","yes","gadrlaravali@gmail.com","hyd");
+insert into employee_details values(10007,"2021-05-11",6898659,5780,"codex" ,"14lpa","4years","yes",4587998,"9lpa","gadrlaravali@gmail.com","veeru","yes","shift C","yes","gadrlaravali@gmail.com","hyd");
