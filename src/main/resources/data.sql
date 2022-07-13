@@ -15,7 +15,7 @@ insert into skills values(2,'Java');
 insert into skills values(3,'Dot Net');
 
 insert into designation values(1,'Software Enginner');
-insert into designation values(2,'SrSoftware Enginner');
+insert into designation values(2,'jrSoftware Enginner');
 insert into designation values(3,'Manager');
 
 insert into project(status_id,status_name)values(1,'Project ID');
@@ -42,6 +42,7 @@ insert into company_mobile (company_mobile_id, company_mobile_status ) values (1
 insert into employee_details values(10001,"2021-05-11",87564534,5690,"codex" ,"14lpa","4years","yes",8754378,"8lpa","gadrlaravali@gmail.com","veeru","yes","shift B","yes","gadrlaravali@gmail.com","hyd");
 insert into employee_details values(10004,"2021-05-11",9536774,5670,"codex" ,"10lpa","5years","yes",96534356,"5lpa","gadrlaravali@gmail.com","veeru","yes","shift A","yes","gadrlaravali@gmail.com","hyd");
 insert into employee_details values(10007,"2021-05-11",6898659,5780,"codex" ,"14lpa","4years","yes",4587998,"9lpa","gadrlaravali@gmail.com","veeru","yes","shift C","yes","gadrlaravali@gmail.com","hyd");
+
 INSERT INTO profile_dropdown(profile_id,profile_source)
 VALUES (1,"Indeed"),
 	   (2,"LinkedIn"),
@@ -55,3 +56,9 @@ INSERT INTO status_dropdown(status_id,select_status)
 VALUES (1,"Selected"),
 	   (2,"Rejected"),
        (3,"Hold");
+
+INSERT INTO personal_details VALUES (1,"BZJPJ34","62564161115","Hyderabad","Bombay","ganesh",true,"1990-4-25","gani@gmail.com",6416416164,6416114615,0125584136541,"RH+",
+              true,"father","mother","spouse","children1","children2");
+
+INSERT INTO offer_status VALUES (1,"accepted");
+INSERT INTO offer_status VALUES (2,"rejected");

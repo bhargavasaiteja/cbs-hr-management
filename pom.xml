@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.1</version>
+		<version>2.2.4.RELEASE</version>
 		<relativePath/>
 	</parent>
-	<groupId>com.codexbox</groupId>
-	<artifactId>cbs_onboarding_formalities</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>cbs_onboarding_formalities</name>
-	<description>project on onboarding formalities module</description>
+	<groupId>com.codexbox.cbs</groupId>
+	<artifactId>cbs-user-management</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>cbs-user-management</name>
+	<description>Microservice Demo project for Spring Boot / JPA / Dockerfile</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -74,6 +74,15 @@
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>2.9.2</version>
 		</dependency>
+		<!--		<dependency>-->
+		<!--			<groupId>org.springframework.boot</groupId>-->
+		<!--			<artifactId>spring-boot-starter-actuator</artifactId>-->
+		<!--		</dependency>-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-test</artifactId>
@@ -105,6 +114,7 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -116,19 +126,21 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
+
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.10.1</version>
-				<configuration>
-					<source>8</source>
-					<target>8</target>
-				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>${project.parent.version}</version>
+			</plugin>
+
 		</plugins>
 	</build>
 
 
 </project>
-

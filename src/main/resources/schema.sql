@@ -1,5 +1,7 @@
-drop table if exists cbs_onboarding_formalities.education_details;
-create table cbs_onboarding_formalities.education_details(id tinyint NOT NULL PRIMARY KEY,ssc_Percentage float,
+
+
+
+create table education_details(id tinyint NOT NULL PRIMARY KEY,ssc_Percentage float,
  intermediate_Percentage float, intermediate_specialization varchar(60),
  UG_percentage float,UG_specialization varchar(60),PG_percentage float,
  PG_specialization varchar(60),Dr_percentage float,Dr_specialization varchar(60));
@@ -50,6 +52,8 @@ shift_allowance int ,
 work_location varchar(50),
 location_allowance varchar(10)
 );
+
+
 create table profile_dropdown(
 profile_id int not null auto_increment,
 profile_source varchar(50),
@@ -74,5 +78,42 @@ status_id int not null auto_increment,
 select_status varchar(50),
 primary key (status_id)
 );
+
+create table Hr_timesheet_details(
+emp_Id integer(10),
+login_time varchar(20),
+logout_time varchar(20),
+number_of_working_days_in_month bigint,
+holidays_or_client_management varchar(20)
+);
+
+create table candidateStatus(
+id int primary key,
+accepted varchar(255),
+rejected varchar(255)
+);
+
+ CREATE TABLE personal_details(
+ id int primary key,
+    pan_card  varchar(30) UNIQUE,
+    aadhar_card bigint UNIQUE,
+current_address varchar(250),
+  permanent_address varchar(250),
+ name varchar(100),
+  gender boolean,
+  dob date,
+  personal_emailid varchar(50) UNIQUE,
+  mobile_number  bigint UNIQUE,
+  emergency_contact_number bigint,
+  bank_account   bigint UNIQUE,
+  blood_group varchar(10),
+  maritial_status boolean,
+  father_name varchar(100),
+ mother_name varchar(100),
+  spouse_name varchar(100),
+  children_1 varchar(100),
+   children_2 varchar(100)
+);
+
 
 
