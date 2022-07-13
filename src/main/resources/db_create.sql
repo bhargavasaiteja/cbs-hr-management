@@ -1,0 +1,2 @@
+CREATE DATABASE IF NOT EXISTS cbs_emp;
+CREATE DATABASE IF NOT EXISTS employee_hiring_schema;
