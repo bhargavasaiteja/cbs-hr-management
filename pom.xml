@@ -13,10 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>cbs_onboarding_formalities</name>
 	<description>project on onboarding formalities module</description>
-	<artifactId>employee-Idcreation</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>employee-Idcreation</name>
-	<description>employee-Idcreation</description>
+
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
