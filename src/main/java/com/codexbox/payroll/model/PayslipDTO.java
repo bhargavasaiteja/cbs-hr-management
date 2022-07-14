@@ -5,9 +5,9 @@ import lombok.Data;
 
 @Data
 public class PayslipDTO {
-
-private Integer noofworkingdays;
-private Integer noofdays;
-private Integer calctc;
-private Integer months;
+private Long id;
+private Integer noOfWorkingDays;
+private Integer noOfDaysPresent;
+private Integer ctc;
+private String months;
 }

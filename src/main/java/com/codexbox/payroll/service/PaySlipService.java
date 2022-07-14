@@ -23,10 +23,12 @@ PaySlip payslip=new PaySlip();
     }
 
     void mapmodeltoentity(PayslipDTO payslipDTO, PaySlip payslip){
-        payslip.setNoofworkingdays(payslipDTO.getNoofworkingdays());
-        payslip.setNoofdays(payslipDTO.getNoofdays());
-        payslip.setCalctc(payslipDTO.getCalctc());
-        payslip.setId(1);
+        payslip.setNoOfWorkingDays(payslipDTO.getNoOfWorkingDays());
+        payslip.setNoOfDaysPresent(payslipDTO.getNoOfDaysPresent());
+        payslip.setCtc(payslipDTO.getCtc());
+        payslip.setMonth(payslipDTO.getMonths());
+        payslip.setId(payslipDTO.getId());
+
     }
 
 

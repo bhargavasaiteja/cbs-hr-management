@@ -3,10 +3,7 @@ package com.codexbox.payroll.entity;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 
 @Entity
@@ -14,13 +11,24 @@ import javax.persistence.Table;
 @Data
 public class PaySlip {
     @Id
-    @Column(name="no_of_working_days")
-    private Integer noofworkingdays;
-    @Column(name="no_of_days")
-    private Integer noofdays;
-    @Column(name="calctc")
-    private Integer calctc;
-    @Column(name="id")
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+
+    @Column(name = "payroll_id")
+    private long id;
+
+    @Column(name = "no_of_working_days")
+    private Integer noOfWorkingDays;
+
+    @Column(name = "no_of_days_present")
+    private Integer noOfDaysPresent;
+
+    @Column(name = "ctc")
+    private Integer ctc;
+
+    @Column(name = "month")
+    private String month;
+
+
+
 
   }
