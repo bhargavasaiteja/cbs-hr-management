@@ -1,7 +1,7 @@
 package com.codexbox.cbs.hrmanagement.services;
 
 
-import com.codexbox.cbs.hrmanagement.models.FileDTO;
+import com.codexbox.cbs.hrmanagement.entities.CbsFileUploadEntity;
 import com.codexbox.cbs.hrmanagement.repositories.CbsFilesRepo;
 import com.codexbox.cbs.hrmanagement.util.FileUploadUtil;
 
@@ -25,26 +25,26 @@ public class CbsFilesService {
     @Value("${cbs.files.dir}")
     String filesDir;
 
-    public FileDTO store(MultipartFile file) throws IOException {
+    public CbsFileUploadEntity store(MultipartFile file) throws IOException {
         String fileName = StringUtils.cleanPath(file.getOriginalFilename());
         String filePath = filesDir + "/" + fileName;
 
-        FileDTO fileDTO = new FileDTO();
-        fileDTO.setFileId(UUID.randomUUID().toString());
-        fileDTO.setFileName(fileName);
-        fileDTO.setFilePath(filePath);
+        CbsFileUploadEntity cbsFileUploadEntity = new CbsFileUploadEntity();
+        cbsFileUploadEntity.setFileId(UUID.randomUUID().toString());
+        cbsFileUploadEntity.setFileName(fileName);
+        cbsFileUploadEntity.setFilePath(filePath);
         FileUploadUtil.saveFile(filesDir, fileName, file);
-       return  cbsFilesRepo.save(fileDTO);
+       return  cbsFilesRepo.save(cbsFileUploadEntity);
     }
 
-    public FileDTO getFileById(String id) {
-        Optional<FileDTO> fileOptional = cbsFilesRepo.findById(id);
+    public CbsFileUploadEntity getFileById(String id) {
+        Optional<CbsFileUploadEntity> fileOptional = cbsFilesRepo.findById(id);
         if (fileOptional.isPresent()) {
             return fileOptional.get();
         }
         return null;
     }
-    public List<FileDTO> getFileList(){
-        return (List<FileDTO>) cbsFilesRepo.findAll();
+    public List<CbsFileUploadEntity> getFileList(){
+        return (List<CbsFileUploadEntity>) cbsFilesRepo.findAll();
     }
 }

@@ -108,3 +108,13 @@ holidays_or_client_management varchar(20)
  third_StartDate DATE,
  third_enddate DATE,
  reason_for_relieving_from_current_organization VARCHAR(250));
+
+ CREATE TABLE bank_status (
+     bank_user_id bigint,
+     status_active varchar(30),
+     not_active varchar(30));
+
+ create table Files(file_id varchar(50),
+ 	 file_name varchar(250),
+ 	 file_path varchar(250),
+ 	 file_type varchar(10));

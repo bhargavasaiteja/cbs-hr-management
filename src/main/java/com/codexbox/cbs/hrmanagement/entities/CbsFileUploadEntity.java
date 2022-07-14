@@ -1,4 +1,4 @@
-package com.codexbox.cbs.hrmanagement.models;
+package com.codexbox.cbs.hrmanagement.entities;
 
 import lombok.Data;
 
@@ -10,7 +10,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "FILES")
 @Data
-public class FileDTO {
+public class CbsFileUploadEntity {
 
     @Id
     @Column(name = "file_id")
