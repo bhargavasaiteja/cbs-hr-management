@@ -1,5 +1,4 @@
 package com.codexbox.cbs.hrmanagement.models;
-
 import lombok.Data;
 
 @Data

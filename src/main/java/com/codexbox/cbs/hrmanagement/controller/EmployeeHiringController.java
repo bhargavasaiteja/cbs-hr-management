@@ -35,7 +35,7 @@ public class EmployeeHiringController {
     }
     @PostMapping("/employeeHiringSubmit")
     public ResponseEntity<EmployeeHiringModel> submitHiringDetails(@RequestBody EmployeeHiringModel employeeHiringModel) {
-        String saveDetails = employeeHiringServices.saveSubmitDetails(employeeHiringModel);
+        String saveDetails = employeeHiringServices.saveEmployeehiringDetails(employeeHiringModel);
         return new ResponseEntity(saveDetails, HttpStatus.OK);
     }
 }

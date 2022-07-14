@@ -12,7 +12,7 @@ public class EmployeeHiringServices {
     @Autowired
     private EmployeeHiringRepositories repo;
     @Transactional
-    public String saveSubmitDetails(EmployeeHiringModel details) {
+    public String saveEmployeehiringDetails(EmployeeHiringModel details) {
         String status = "Submit details are Successfully";
         EmployeeHiringEntity entity=new EmployeeHiringEntity();
         mappingMethod(details,entity);

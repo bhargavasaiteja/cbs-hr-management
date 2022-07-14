@@ -17,7 +17,7 @@ public class SkillsService {
     public SkillsRepository skillsRepository;
 
     @Transactional
-    public List<SkillsDTO> getskills() {
+    public List<SkillsDTO> getSkillsDetails() {
         List<SkillsEntity> skillsEntityList = (List<SkillsEntity>) skillsRepository.findAll();
         List<SkillsDTO> skillsDTOList = new ArrayList<>();
         skillsEntityList.forEach(entity -> {

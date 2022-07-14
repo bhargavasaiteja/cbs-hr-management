@@ -12,7 +12,7 @@ public class HrTimeSheetService {
     @Autowired
     private TimesheetRepository timesheetRepository;
 
-    public String hrTimeSheetService(TimesheetDTO timesheetDTO) {
+    public String hrTimeSheetServiceDetails(TimesheetDTO timesheetDTO) {
         String status = "SUCCESSFUL";
         TimeSheetDetails timeSheetDetails = new TimeSheetDetails();
 

@@ -5,5 +5,5 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface OnboardingFormalitiesService {
-  String details(OnboardingFormalitiesDTO personaldetailsDTO);
+  String OnboardingFormalitiesdetails(OnboardingFormalitiesDTO personaldetailsDTO);
 }

@@ -48,11 +48,11 @@ public class EmployeeIdCreationController {
     }
     @GetMapping("/billingStatus")
     public ResponseEntity< List<BillingStatusDTO>> getProjectData(){
-        return new ResponseEntity<>(billingService.getProjectDetails(), HttpStatus.OK);
+        return new ResponseEntity<>(billingService.getBillingDetails(), HttpStatus.OK);
     }
     @GetMapping("/departmentDetails")
     public ResponseEntity<List<DepartmentDTO>> getDepartmentData() {
-        return new ResponseEntity<>(departmentService.department(), HttpStatus.OK);
+        return new ResponseEntity<>(departmentService.getDepartmentDetails(), HttpStatus.OK);
     }
     @GetMapping("/insuranceDetails")
     public ResponseEntity<List<InsuranceDTO>> insuranceController() {
@@ -76,12 +76,12 @@ public class EmployeeIdCreationController {
     }
     @GetMapping("/skills")
     public ResponseEntity<List<SkillsEntity>> findSkillsById() {
-        return new ResponseEntity(  skillsService.getskills(), HttpStatus.OK);
+        return new ResponseEntity(  skillsService.getSkillsDetails(), HttpStatus.OK);
     }
 
     @GetMapping("/designation")
     public ResponseEntity<List<DesignationEntity>> findDesignationbyId(){
-        return new ResponseEntity(designationService.getdesignation(),HttpStatus.OK);
+        return new ResponseEntity(designationService.getDesignationDtails(),HttpStatus.OK);
     }
 }
 

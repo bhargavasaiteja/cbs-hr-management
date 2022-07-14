@@ -12,10 +12,11 @@ import java.util.List;
 @Service
 
 public class DesignationService {
+
     @Autowired
     public DesignationRepository designationRepository;
 
-    public List<DesignationDTO> getdesignation() {
+    public List<DesignationDTO> getDesignationDtails() {
         List<DesignationEntity> list = (List<DesignationEntity>)designationRepository.findAll();
         List<DesignationDTO> designationEntityList = new ArrayList<>();
         list.forEach(designationEntity ->{

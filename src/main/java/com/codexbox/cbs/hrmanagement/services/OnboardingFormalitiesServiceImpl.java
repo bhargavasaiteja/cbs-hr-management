@@ -11,7 +11,7 @@ public class OnboardingFormalitiesServiceImpl implements OnboardingFormalitiesSe
     @Autowired
     private OnboardingFormalitiesRepo onboardingFormalitiesRepo;
     @Override
-    public String details(OnboardingFormalitiesDTO onboardingFormalitiesDTO) {
+    public String OnboardingFormalitiesdetails(OnboardingFormalitiesDTO onboardingFormalitiesDTO) {
 
         String status = "saved successfully";
         OnboardingFormalitiesEntity onboardingFormalitiesEntity = new OnboardingFormalitiesEntity();

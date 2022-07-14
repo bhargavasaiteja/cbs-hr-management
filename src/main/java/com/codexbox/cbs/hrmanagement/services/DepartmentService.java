@@ -15,7 +15,7 @@ public class DepartmentService {
     @Autowired
     public DepartmentRepo repo;
 @Transactional
-    public List<DepartmentDTO> department() {
+    public List<DepartmentDTO> getDepartmentDetails() {
     List<DepartmentEntity> entityList = (List<DepartmentEntity>) repo.findAll();
     List<DepartmentDTO> departDTOList = new ArrayList();
         entityList.forEach(entity->{

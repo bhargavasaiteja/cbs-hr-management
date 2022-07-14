@@ -13,7 +13,7 @@ import java.util.List;
 public class OfferStatusServiceImpl {
     @Autowired
     public OfferStatusRepo offerStatusRepo;
-    public List<OfferStatusDTO> getDetails() {
+    public List<OfferStatusDTO> getOfferStatusDetails() {
         List<OfferStatusDTO>  list = new ArrayList();
         List<OfferStatusEntity>offerstatusentity = (List<OfferStatusEntity>) offerStatusRepo.findAll();
         offerstatusentity.forEach(entity->

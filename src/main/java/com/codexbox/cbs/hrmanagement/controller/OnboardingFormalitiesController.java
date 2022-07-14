@@ -22,13 +22,13 @@ public class OnboardingFormalitiesController {
 
     @PostMapping("/onboardingFormalities")
     public ResponseEntity<String>saveDetails(@RequestBody OnboardingFormalitiesDTO onboardingFormalitiesDTO){
-        String result = onboardingFormalitiesService.details(onboardingFormalitiesDTO);
+        String result = onboardingFormalitiesService.OnboardingFormalitiesdetails(onboardingFormalitiesDTO);
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
     @GetMapping("/candidateStatus")
     public ResponseEntity<List<OfferStatusDTO>> getCandidateDetails()
     {
-        return new ResponseEntity< >(offerStatusService.getDetails(),HttpStatus.OK );
+        return new ResponseEntity< >(offerStatusService.getOfferStatusDetails(),HttpStatus.OK );
     }
 
 }
