@@ -118,3 +118,8 @@ holidays_or_client_management varchar(20)
  	 file_name varchar(250),
  	 file_path varchar(250),
  	 file_type varchar(10));
+
+ 	 CREATE TABLE offer_status(
+      id int primary key,
+      candidate_status  varchar(255)
+       );
