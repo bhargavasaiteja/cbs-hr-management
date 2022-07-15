@@ -9,5 +9,5 @@ private Long id;
 private Integer noOfWorkingDays;
 private Integer noOfDaysPresent;
 private Integer ctc;
-private String months;
+private String month;
 }

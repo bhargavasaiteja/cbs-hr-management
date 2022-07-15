@@ -32,7 +32,7 @@ public class PdfGenerator {
 
             PdfPTable table = new PdfPTable(5);
             // Add PDF Table Header ->
-            Stream.of("id", "  months ", "noOfDaysPresent " , " noOfWorkingDays " , " ctc ")
+            Stream.of("id",  "noOfDaysPresent " , " noOfWorkingDays " ,"month", " ctc ")
                     .forEach(headerTitle -> {
                         PdfPCell header = new PdfPCell();
                         Font headFont = FontFactory.getFont(FontFactory.HELVETICA_BOLD);
@@ -70,18 +70,20 @@ public class PdfGenerator {
             ctc.setHorizontalAlignment(Element.ALIGN_LEFT);
             table.addCell(ctc);
 
-            PdfPCell months = new PdfPCell(new Phrase(paySlip.getMonth()));
-            months.setPaddingLeft(4);
-            months.setVerticalAlignment(Element.ALIGN_MIDDLE);
-            months.setHorizontalAlignment(Element.ALIGN_LEFT);
-            table.addCell(months);
+            PdfPCell month = new PdfPCell(new Phrase(paySlip.getMonth()));
+            month.setPaddingLeft(4);
+            month.setVerticalAlignment(Element.ALIGN_MIDDLE);
+            month.setHorizontalAlignment(Element.ALIGN_LEFT);
+            table.addCell(month);
             document.add(table);
-        } catch (DocumentException ex) {
-            log.error("got exception while generating payroll pdf");
+            document.close();
         }
 
 
-        document.close();
+        catch (DocumentException ex) {
+            log.error("got exception while generating payroll pdf");
+        }
+
         return new ByteArrayInputStream(out.toByteArray());
     }
 

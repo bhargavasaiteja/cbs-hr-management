@@ -26,7 +26,7 @@ private PaySlipRepo paySlipRepo;
         payslip.setNoOfWorkingDays(payslipDTO.getNoOfWorkingDays());
         payslip.setNoOfDaysPresent(payslipDTO.getNoOfDaysPresent());
         payslip.setCtc(payslipDTO.getCtc());
-        payslip.setMonth(payslipDTO.getMonths());
+        payslip.setMonth(payslipDTO.getMonth());
         //payslip.setId(payslipDTO.getId());
 
     }
