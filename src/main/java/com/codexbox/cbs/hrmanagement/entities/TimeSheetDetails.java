@@ -10,7 +10,7 @@ public class TimeSheetDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "emp_Id")
+    @Column(name = "emp_id")
     private int empId;
     @Column(name = "login_time")
     private String logInTime;
