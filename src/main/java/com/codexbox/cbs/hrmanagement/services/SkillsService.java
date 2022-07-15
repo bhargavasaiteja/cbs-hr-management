@@ -11,11 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-
 public class SkillsService {
     @Autowired
     public SkillsRepository skillsRepository;
-
     @Transactional
     public List<SkillsDTO> getSkillsDetails() {
         List<SkillsEntity> skillsEntityList = (List<SkillsEntity>) skillsRepository.findAll();
@@ -27,11 +25,8 @@ public class SkillsService {
         });
         return skillsDTOList;
     }
-
     private void mapModelToSkillsEntity(SkillsEntity entity, SkillsDTO skillsDTO) {
         skillsDTO.setId(entity.getId());
         skillsDTO.setSkillsName(entity.getSkillsName());
     }
-
-
 }

@@ -55,7 +55,5 @@ public class EmpServiceImpl implements EmpService {
         bankAccountEntity.setNotActive(empDTO.getBankDTO().getNotActive());
         return bankAccountEntity;
     }
-
-
 }
 

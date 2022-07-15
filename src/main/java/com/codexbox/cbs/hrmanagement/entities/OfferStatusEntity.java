@@ -1,32 +1,19 @@
 package com.codexbox.cbs.hrmanagement.entities;
 
+import lombok.Data;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
+@Data
 @Entity
 @Table(name="offer_status")
 public class OfferStatusEntity {
     @Id
-    @Column(name = "id" )
+    @Column(name = "id")
     private int id;
-    @Column(name= "candidate_status")
+    @Column(name = "candidate_status")
     private String candidatestatus;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getCandidatestatus() {
-        return candidatestatus;
-    }
-
-    public void setCandidatestatus(String candidatestatus) {
-        this.candidatestatus = candidatestatus;
-    }
 }

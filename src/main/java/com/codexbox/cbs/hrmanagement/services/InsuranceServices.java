@@ -13,7 +13,7 @@ import java.util.List;
 public class InsuranceServices {
     @Autowired
     InsuranceRepo insuranceRepo;
-    public List<InsuranceDTO> insuranceServicedetails(){
+    public List<InsuranceDTO> insuranceServiceDetails(){
      List<InsuranceEntity> insuranceEntityList = (List<InsuranceEntity>) insuranceRepo.findAll();
      List<InsuranceDTO> insuranceDTOList = new ArrayList<>();
      insuranceEntityList.forEach(insuranceObj -> {
@@ -23,7 +23,6 @@ public class InsuranceServices {
      });
      return insuranceDTOList;
     }
-
     public void mappingInsuranceEntityAndDTO(InsuranceDTO insuranceDto, InsuranceEntity insuranceEntity){
         insuranceDto.setInsuranceId(insuranceEntity.getInsuranceId());
         insuranceDto.setInsuranceDetails(insuranceEntity.getInsuranceDetails());

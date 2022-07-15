@@ -12,10 +12,8 @@ import java.util.List;
 @Service
 
 public class DesignationService {
-
     @Autowired
     public DesignationRepository designationRepository;
-
     public List<DesignationDTO> getDesignationDtails() {
         List<DesignationEntity> list = (List<DesignationEntity>)designationRepository.findAll();
         List<DesignationDTO> designationEntityList = new ArrayList<>();
@@ -28,8 +26,6 @@ public class DesignationService {
     }
     private void mapModelToEntity(DesignationEntity designationEntity, DesignationDTO designationDTO) {
         designationDTO.setId(designationEntity.getId());
-        designationDTO.setDesignatitonname(designationEntity.getDesignatitonName());
+        designationDTO.setDesignatitonName(designationEntity.getDesignatitonName());
     }
-
-
 }

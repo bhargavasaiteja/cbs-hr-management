@@ -8,8 +8,6 @@ import java.util.Date;
 @Data
 @Configuration
 public class OnboardingFormalitiesDTO {
-
-
     private int id;
     private Boolean agreedwithterms;
     private Boolean sent;
@@ -28,43 +26,60 @@ public class OnboardingFormalitiesDTO {
 
     private Date dob;
 
-    private String personalemailid;
+    private String personalEmailId;
 
-    private long mobilenumber;
+    private long mobileNumber;
 
-    private long emergencycontactnumber;
+    private long emergencyContactNumber;
 
-    private Long bankaccount;
+    private Long bankAccount;
 
-    private String bloodgroup;
+    private String bloodGroup;
 
-    private boolean maritialstatus;
+    private boolean maritalStatus;
 
-    private String fathername;
+    private String fatherName;
 
-    private String mothername;
+    private String motherName;
 
-    private String spousename;
+    private String spouseName;
 
     private String children1;
 
     private String children2;
+
     private Float sscPercentage;
+
     private Float IntermediatePercentage;
+
     private String IntermediateSpecialization;
+
     private Float ugPercentage;
+
     private String ugSpecialization;
+
     private Float pgPercentage;
+
     private String pgSpecialization;
+
     private Float drPercentage;
+
     private String drSpecialization;
-    private Integer empid;
+
+    private Integer empId;
+
     private Date firstStartDate;
+
     private Date firstEndDate;
+
     private Date secondStartDate;
+
     private Date secondEndDate;
+
     private Date thirdStartDate;
+
     private Date thirdEndDate;
+
     private String reason;
 
 }

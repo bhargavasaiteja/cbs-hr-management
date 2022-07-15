@@ -4,6 +4,6 @@ import com.codexbox.cbs.hrmanagement.models.OnboardingFormalitiesDTO;
 import org.springframework.stereotype.Service;
 
 @Service
-public interface OnboardingFormalitiesService {
-  String OnboardingFormalitiesdetails(OnboardingFormalitiesDTO personaldetailsDTO);
+public interface OnBoardingFormalitiesService {
+  String onBoardingFormalitiesDetails(OnboardingFormalitiesDTO personalDetailsDTO);
 }

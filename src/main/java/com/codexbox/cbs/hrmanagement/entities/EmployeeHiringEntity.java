@@ -12,8 +12,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "employee_hiring")
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class EmployeeHiringEntity {
     @Id
     @Column(name="id")
