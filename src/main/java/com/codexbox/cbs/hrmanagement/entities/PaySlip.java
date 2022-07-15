@@ -1,4 +1,4 @@
-package com.codexbox.payroll.entity;
+package com.codexbox.cbs.hrmanagement.entities;
 import lombok.Data;
 
 import javax.persistence.*;

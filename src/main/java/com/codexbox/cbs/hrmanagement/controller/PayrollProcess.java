@@ -1,10 +1,10 @@
-package com.codexbox.payroll.controller;
+package com.codexbox.cbs.hrmanagement.controller;
 
 
-import com.codexbox.payroll.entity.PaySlip;
-import com.codexbox.payroll.model.PayslipDTO;
-import com.codexbox.payroll.service.PaySlipService;
-import com.codexbox.payroll.util.PdfGenerator;
+import com.codexbox.cbs.hrmanagement.entities.PaySlip;
+import com.codexbox.cbs.hrmanagement.models.PayslipDTO;
+import com.codexbox.cbs.hrmanagement.services.PaySlipService;
+import com.codexbox.cbs.hrmanagement.util.PdfGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpHeaders;

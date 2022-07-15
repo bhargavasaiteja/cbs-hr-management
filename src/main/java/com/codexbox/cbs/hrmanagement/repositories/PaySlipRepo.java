@@ -1,8 +1,7 @@
-package com.codexbox.payroll.repo;
+package com.codexbox.cbs.hrmanagement.repositories;
 
 
-import com.codexbox.payroll.entity.PaySlip;
-import com.codexbox.payroll.model.PayslipDTO;
+import com.codexbox.cbs.hrmanagement.entities.PaySlip;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 @Repository

@@ -1,9 +1,9 @@
-package com.codexbox.payroll.service;
+package com.codexbox.cbs.hrmanagement.services;
 
 
-import com.codexbox.payroll.entity.PaySlip;
-import com.codexbox.payroll.model.PayslipDTO;
-import com.codexbox.payroll.repo.PaySlipRepo;
+import com.codexbox.cbs.hrmanagement.entities.PaySlip;
+import com.codexbox.cbs.hrmanagement.models.PayslipDTO;
+import com.codexbox.cbs.hrmanagement.repositories.PaySlipRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +12,6 @@ public class PaySlipService {
 
 @Autowired
 private PaySlipRepo paySlipRepo;
-
 
     public PaySlip payrollService(PayslipDTO payslipDTO)
     {

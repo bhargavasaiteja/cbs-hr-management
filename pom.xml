@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-<<<<<<< HEAD
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-=======
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
->>>>>>> origin/feature/US00005-PayrollProcess
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-<<<<<<< HEAD
 		<version>2.2.4.RELEASE</version>
 		<relativePath/>
 	</parent>
@@ -26,33 +21,6 @@
 
 	<dependencies>
 		<dependency>
-=======
-		<version>2.7.1</version>
-		<relativePath/>
-	</parent>
-	<groupId>com.codexbox</groupId>
-	<artifactId>payroll</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>payroll</name>
-	<description>payroll project for Spring Boot</description>
-	<properties>
-		<java.version>1.8</java.version>
-		<spring-cloud.version>2021.0.3</spring-cloud.version>
-	</properties>
-	<dependencies>
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.29</version>
-		</dependency>
-
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.29</version>
-		</dependency>
-		<dependency>
->>>>>>> origin/feature/US00005-PayrollProcess
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
@@ -61,7 +29,6 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-<<<<<<< HEAD
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -77,18 +44,11 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>1.18.22</version>
-=======
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
->>>>>>> origin/feature/US00005-PayrollProcess
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-<<<<<<< HEAD
 			<exclusions>
 				<exclusion>
 					<groupId>org.junit.vintage</groupId>
@@ -119,9 +79,27 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-test</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>com.itextpdf</groupId>
 			<artifactId>itextpdf</artifactId>
 			<version>5.0.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.activation</groupId>
+			<artifactId>activation</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-crypto</artifactId>
+			<version>5.7.2</version>
 		</dependency>
 	</dependencies>
 	<dependencyManagement>
@@ -133,10 +111,6 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/feature/US00005-PayrollProcess
 		</dependencies>
 	</dependencyManagement>
 
@@ -145,7 +119,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-<<<<<<< HEAD
 				<version>${project.parent.version}</version>
 
 			</plugin>
@@ -169,18 +142,4 @@
 	</build>
 
 
-=======
-				<configuration>
-					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
-
->>>>>>> origin/feature/US00005-PayrollProcess
 </project>

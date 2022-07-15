@@ -1,5 +1,5 @@
-package com.codexbox.payroll.util;
-import com.codexbox.payroll.entity.PaySlip;
+package com.codexbox.cbs.hrmanagement.util;
+import com.codexbox.cbs.hrmanagement.entities.PaySlip;
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
@@ -78,7 +78,6 @@ public class PdfGenerator {
             document.add(table);
             document.close();
         }
-
 
         catch (DocumentException ex) {
             log.error("got exception while generating payroll pdf");
