@@ -12,22 +12,22 @@ public class PaySlipService {
 
 @Autowired
 private PaySlipRepo paySlipRepo;
-PaySlip payslip=new PaySlip();
 
-    public String payrollService(PayslipDTO payslipDTO)
+
+    public PaySlip payrollService(PayslipDTO payslipDTO)
     {
+        PaySlip payslip=new PaySlip();
         String status="successfull";
-        mapmodeltoentity(payslipDTO,payslip);
-        paySlipRepo.save(payslip);
-        return status;
+        mapModelToEntity(payslip,payslipDTO);
+        return  paySlipRepo.save(payslip);
     }
 
-    void mapmodeltoentity(PayslipDTO payslipDTO, PaySlip payslip){
+    void mapModelToEntity(PaySlip payslip, PayslipDTO payslipDTO){
         payslip.setNoOfWorkingDays(payslipDTO.getNoOfWorkingDays());
         payslip.setNoOfDaysPresent(payslipDTO.getNoOfDaysPresent());
         payslip.setCtc(payslipDTO.getCtc());
         payslip.setMonth(payslipDTO.getMonths());
-        payslip.setId(payslipDTO.getId());
+        //payslip.setId(payslipDTO.getId());
 
     }
 

@@ -1,6 +1,7 @@
 package com.codexbox.payroll.controller;
 
 
+import com.codexbox.payroll.entity.PaySlip;
 import com.codexbox.payroll.model.PayslipDTO;
 import com.codexbox.payroll.service.PaySlipService;
 import com.codexbox.payroll.util.PdfGenerator;
@@ -24,8 +25,8 @@ public class PayrollProcess {
     @PostMapping("/payrollProcess")
     public ResponseEntity<InputStreamResource> payrollProcess(@RequestBody PayslipDTO payslipDTO) {
 
-        String status = paySlipService.payrollService(payslipDTO);
-        ByteArrayInputStream bis = PdfGenerator.payslipPDFReport(payslipDTO);
+        PaySlip paySlip = paySlipService.payrollService(payslipDTO);
+        ByteArrayInputStream bis = PdfGenerator.payslipPDFReport(paySlip);
 
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Disposition", "inline; filename=payslip.pdf");

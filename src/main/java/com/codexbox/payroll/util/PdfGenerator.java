@@ -1,7 +1,5 @@
 package com.codexbox.payroll.util;
-
 import com.codexbox.payroll.entity.PaySlip;
-import com.codexbox.payroll.model.PayslipDTO;
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
@@ -15,9 +13,8 @@ import java.util.stream.Stream;
 @Component
 @Slf4j
 public class PdfGenerator {
-   //  private static Logger logger = LoggerFactory.getLogger(PDFGenerator.class);
 
-    public static ByteArrayInputStream payslipPDFReport(PayslipDTO payslipDTO) {
+    public static ByteArrayInputStream payslipPDFReport(PaySlip paySlip) {
         Document document = new Document();
         ByteArrayOutputStream out = new ByteArrayOutputStream();
 
@@ -35,7 +32,7 @@ public class PdfGenerator {
 
             PdfPTable table = new PdfPTable(5);
             // Add PDF Table Header ->
-            Stream.of("id", "  months ", "noOfDaysPresent " , " months " , " months ")
+            Stream.of("id", "  months ", "noOfDaysPresent " , " noOfWorkingDays " , " ctc ")
                     .forEach(headerTitle -> {
                         PdfPCell header = new PdfPCell();
                         Font headFont = FontFactory.getFont(FontFactory.HELVETICA_BOLD);
@@ -46,34 +43,34 @@ public class PdfGenerator {
                         table.addCell(header);
                     });
 
-            // for (PaySlip customer : payslipDTO) {
-            PdfPCell id = new PdfPCell(new Phrase(payslipDTO.getId()));
+            // for (PaySlip customer : paySlip) {
+            PdfPCell id = new PdfPCell(new Phrase(paySlip.getId()));
             id.setPaddingLeft(4);
             id.setVerticalAlignment(Element.ALIGN_MIDDLE);
             id.setHorizontalAlignment(Element.ALIGN_CENTER);
             table.addCell(id);
 
 
-            PdfPCell noOfWorkingDays = new PdfPCell(new Phrase(payslipDTO.getNoOfWorkingDays()));
+            PdfPCell noOfWorkingDays = new PdfPCell(new Phrase(paySlip.getNoOfWorkingDays()));
             noOfWorkingDays.setPaddingLeft(4);
             noOfWorkingDays.setVerticalAlignment(Element.ALIGN_MIDDLE);
             noOfWorkingDays.setHorizontalAlignment(Element.ALIGN_LEFT);
             table.addCell(noOfWorkingDays);
 
 
-            PdfPCell noOfDaysPresent = new PdfPCell(new Phrase(String.valueOf(payslipDTO.getNoOfDaysPresent())));
+            PdfPCell noOfDaysPresent = new PdfPCell(new Phrase(paySlip.getNoOfDaysPresent()));
             noOfDaysPresent.setVerticalAlignment(Element.ALIGN_MIDDLE);
             noOfDaysPresent.setHorizontalAlignment(Element.ALIGN_RIGHT);
             noOfDaysPresent.setPaddingRight(4);
             table.addCell(noOfDaysPresent);
 
-            PdfPCell ctc = new PdfPCell(new Phrase(payslipDTO.getCtc()));
+            PdfPCell ctc = new PdfPCell(new Phrase(paySlip.getCtc()));
             ctc.setPaddingLeft(4);
             ctc.setVerticalAlignment(Element.ALIGN_MIDDLE);
             ctc.setHorizontalAlignment(Element.ALIGN_LEFT);
             table.addCell(ctc);
 
-            PdfPCell months = new PdfPCell(new Phrase(payslipDTO.getMonths()));
+            PdfPCell months = new PdfPCell(new Phrase(paySlip.getMonth()));
             months.setPaddingLeft(4);
             months.setVerticalAlignment(Element.ALIGN_MIDDLE);
             months.setHorizontalAlignment(Element.ALIGN_LEFT);
