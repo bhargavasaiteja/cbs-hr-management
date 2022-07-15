@@ -1,5 +1,5 @@
 package com.codexbox.cbs.hrmanagement.util;
-import com.codexbox.cbs.hrmanagement.entities.PaySlip;
+import com.codexbox.cbs.hrmanagement.entities.PaySlipEntity;
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 @Slf4j
 public class PdfGenerator {
 
-    public static ByteArrayInputStream payslipPDFReport(PaySlip paySlip) {
+    public static ByteArrayInputStream payslipPDFReport(PaySlipEntity paySlip) {
         Document document = new Document();
         ByteArrayOutputStream out = new ByteArrayOutputStream();
 

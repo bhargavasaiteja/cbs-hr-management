@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Entity
 @Table(name="payroll")
 @Data
-public class PaySlip {
+public class PaySlipEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "payroll_id")

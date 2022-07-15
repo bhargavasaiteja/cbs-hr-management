@@ -1,1 +1,0 @@
-Create table payroll(payroll_id bigint primary key, no_of_working_days integer, ctc long, month varchar(10), no_of_days_present integer);

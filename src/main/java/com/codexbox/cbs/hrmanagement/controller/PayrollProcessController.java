@@ -1,10 +1,8 @@
 package com.codexbox.cbs.hrmanagement.controller;
 
 
-import com.codexbox.cbs.hrmanagement.entities.PaySlip;
 import com.codexbox.cbs.hrmanagement.models.PayslipDTO;
 import com.codexbox.cbs.hrmanagement.services.PaySlipService;
-import com.codexbox.cbs.hrmanagement.util.PdfGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpHeaders;
@@ -17,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.io.ByteArrayInputStream;
 
 @RestController
-public class PayrollProcess {
+public class PayrollProcessController {
 
     @Autowired
     private PaySlipService paySlipService;
@@ -25,8 +23,7 @@ public class PayrollProcess {
     @PostMapping("/payrollProcess")
     public ResponseEntity<InputStreamResource> payrollProcess(@RequestBody PayslipDTO payslipDTO) {
 
-        PaySlip paySlip = paySlipService.payrollService(payslipDTO);
-        ByteArrayInputStream bis = PdfGenerator.payslipPDFReport(paySlip);
+        ByteArrayInputStream bis = paySlipService.payrollService(payslipDTO);
 
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Disposition", "inline; filename=payslip.pdf");

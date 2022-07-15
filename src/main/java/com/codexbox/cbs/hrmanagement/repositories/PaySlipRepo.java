@@ -1,11 +1,11 @@
 package com.codexbox.cbs.hrmanagement.repositories;
 
 
-import com.codexbox.cbs.hrmanagement.entities.PaySlip;
+import com.codexbox.cbs.hrmanagement.entities.PaySlipEntity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 @Repository
-public interface PaySlipRepo  extends CrudRepository<PaySlip, Long>{
+public interface PaySlipRepo  extends CrudRepository<PaySlipEntity, Long>{
 }
 
 
