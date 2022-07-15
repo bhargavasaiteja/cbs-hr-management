@@ -14,16 +14,11 @@ public class HrTimesheetController {
     @Autowired
     private HrTimeSheetService hrTimeSheetService;
 
-    public TimesheetDTO service;
-
     @PostMapping("/timesheet")
     public ResponseEntity<String> TimesheetDTO(@RequestBody TimesheetDTO timesheetDTO) {
-        String status= hrTimeSheetService.hrTimeSheetServiceDetails(timesheetDTO);
-        return new ResponseEntity(status,  HttpStatus.CREATED);
+        String status = hrTimeSheetService.hrTimeSheetServiceDetails(timesheetDTO);
+        return new ResponseEntity(status, HttpStatus.CREATED);
     }
-
-
-
 
 
 }

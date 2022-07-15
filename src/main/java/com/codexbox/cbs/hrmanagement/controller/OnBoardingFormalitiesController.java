@@ -14,14 +14,14 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class OnboardingFormalitiesController {
+public class OnBoardingFormalitiesController {
     @Autowired
     private OnBoardingFormalitiesServiceImpl onboardingFormalitiesService;
     @Autowired
      public OfferStatusServiceImpl offerStatusService;
 
     @PostMapping("/onboardingFormalities")
-    public ResponseEntity<String>saveDetails(@RequestBody OnboardingFormalitiesDTO onboardingFormalitiesDTO){
+    public ResponseEntity<String> saveOnBoardingFormalities (@RequestBody OnboardingFormalitiesDTO onboardingFormalitiesDTO){
         String result = onboardingFormalitiesService.onBoardingFormalitiesDetails(onboardingFormalitiesDTO);
         return new ResponseEntity<>(result, HttpStatus.OK);
     }

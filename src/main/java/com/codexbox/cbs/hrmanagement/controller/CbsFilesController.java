@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/file")
-public class FileDBController {
+public class CbsFilesController {
     @Autowired
     private CbsFilesService fileDBService;
 
