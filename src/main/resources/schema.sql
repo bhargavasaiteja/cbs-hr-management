@@ -92,7 +92,11 @@ shift_allowance int ,
 work_location varchar(50),
 location_allowance varchar(10)
 );
-
+CREATE TABLE bank_status (
+bank_user_id bigint PRIMARY KEY,
+status_active varchar(30),
+not_active varchar(30),
+FOREIGN KEY (bank_user_id) REFERENCES employee_details(bank_user_id));
 
 #TIME_SHEET
 
@@ -145,11 +149,7 @@ third_StartDate DATE,
 third_enddate DATE,
 reason_for_relieving_from_current_organization VARCHAR(250));
 
-CREATE TABLE bank_status (
-bank_user_id bigint PRIMARY KEY,
-status_active varchar(30),
-not_active varchar(30)
-);
+
 
 create table Files(file_id varchar(50) primary key,
 file_name varchar(250),
