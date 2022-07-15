@@ -15,6 +15,7 @@ public class BandService {
     public List<BandDTO> bandServiceDetails(){
         List<BandEntity> bandEntityList = (List<BandEntity>) bandRepo.findAll();
         List<BandDTO> bandDTOList = new ArrayList<>();
+
         bandEntityList.forEach(bandObj ->{
             BandDTO bandDTO = new BandDTO();
             mappingBandModelAndEntity(bandDTO,bandObj);

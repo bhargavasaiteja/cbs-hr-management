@@ -18,14 +18,12 @@ import java.util.UUID;
 
 @Service
 public class CbsFilesService {
-
     @Autowired
     private CbsFilesRepo cbsFilesRepo;
-
     @Value("${cbs.files.dir}")
     String filesDir;
-
     public CbsFileUploadEntity store(MultipartFile file) throws IOException {
+
         String fileName = StringUtils.cleanPath(file.getOriginalFilename());
         String filePath = filesDir + "/" + fileName;
 
@@ -36,7 +34,6 @@ public class CbsFilesService {
         FileUploadUtil.saveFile(filesDir, fileName, file);
        return  cbsFilesRepo.save(cbsFileUploadEntity);
     }
-
     public CbsFileUploadEntity getFileById(String id) {
         Optional<CbsFileUploadEntity> fileOptional = cbsFilesRepo.findById(id);
         if (fileOptional.isPresent()) {

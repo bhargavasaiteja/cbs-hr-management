@@ -7,15 +7,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class OnboardingFormalitiesServiceImpl implements OnboardingFormalitiesService{
+public class OnBoardingFormalitiesServiceImpl implements OnBoardingFormalitiesService {
     @Autowired
     private OnboardingFormalitiesRepo onboardingFormalitiesRepo;
     @Override
-    public String OnboardingFormalitiesdetails(OnboardingFormalitiesDTO onboardingFormalitiesDTO) {
+    public String onBoardingFormalitiesDetails(OnboardingFormalitiesDTO personalDetailsDTO) {
 
         String status = "saved successfully";
         OnboardingFormalitiesEntity onboardingFormalitiesEntity = new OnboardingFormalitiesEntity();
-        mapModelToEntity(onboardingFormalitiesDTO,onboardingFormalitiesEntity);
+        mapModelToEntity(personalDetailsDTO,onboardingFormalitiesEntity);
         OnboardingFormalitiesEntity result =onboardingFormalitiesRepo.save(onboardingFormalitiesEntity );
         if (result == null){
             status = "unsuccessfull";
@@ -34,15 +34,15 @@ public class OnboardingFormalitiesServiceImpl implements OnboardingFormalitiesSe
         onboardingFormalitiesEntity.setName(onboardingFormalitiesDTO.getName());
         onboardingFormalitiesEntity.setDob(onboardingFormalitiesDTO.getDob());
         onboardingFormalitiesEntity.setGender(onboardingFormalitiesDTO.isGender());
-        onboardingFormalitiesEntity.setPersonalemailid(onboardingFormalitiesDTO.getPersonalemailid());
-        onboardingFormalitiesEntity.setMobilenumber(onboardingFormalitiesDTO.getMobilenumber());
-        onboardingFormalitiesEntity.setEmergencycontactnumber(onboardingFormalitiesDTO.getEmergencycontactnumber() );
-        onboardingFormalitiesEntity.setBankaccount(onboardingFormalitiesDTO.getBankaccount());
-        onboardingFormalitiesEntity.setBloodgroup(onboardingFormalitiesDTO.getBloodgroup());
-        onboardingFormalitiesEntity.setMaritialstatus(onboardingFormalitiesDTO.isMaritialstatus());
-        onboardingFormalitiesEntity.setFathername(onboardingFormalitiesDTO.getFathername());
-        onboardingFormalitiesEntity.setMothername(onboardingFormalitiesDTO.getMothername());
-        onboardingFormalitiesEntity.setSpousename(onboardingFormalitiesDTO.getSpousename());
+        onboardingFormalitiesEntity.setPersonalemailid(onboardingFormalitiesDTO.getPersonalEmailId());
+        onboardingFormalitiesEntity.setMobilenumber(onboardingFormalitiesDTO.getMobileNumber());
+        onboardingFormalitiesEntity.setEmergencycontactnumber(onboardingFormalitiesDTO.getEmergencyContactNumber() );
+        onboardingFormalitiesEntity.setBankaccount(onboardingFormalitiesDTO.getBankAccount());
+        onboardingFormalitiesEntity.setBloodGroup(onboardingFormalitiesDTO.getBloodGroup());
+        onboardingFormalitiesEntity.setMaritialStatus(onboardingFormalitiesDTO.isMaritalStatus());
+        onboardingFormalitiesEntity.setFatherName(onboardingFormalitiesDTO.getFatherName());
+        onboardingFormalitiesEntity.setMotherName(onboardingFormalitiesDTO.getMotherName());
+        onboardingFormalitiesEntity.setSpouseName(onboardingFormalitiesDTO.getSpouseName());
         onboardingFormalitiesEntity.setChildren1(onboardingFormalitiesDTO.getChildren1());
         onboardingFormalitiesEntity.setChildren2(onboardingFormalitiesDTO.getChildren2());
         onboardingFormalitiesEntity.setSscPercentage(onboardingFormalitiesDTO.getSscPercentage());
@@ -54,7 +54,7 @@ public class OnboardingFormalitiesServiceImpl implements OnboardingFormalitiesSe
         onboardingFormalitiesEntity.setPgSpecialization(onboardingFormalitiesDTO.getPgSpecialization());
         onboardingFormalitiesEntity.setDrPercentage(onboardingFormalitiesDTO.getDrPercentage());
         onboardingFormalitiesEntity.setDrSpecialization(onboardingFormalitiesDTO.getDrSpecialization());
-        onboardingFormalitiesEntity.setEmpid(onboardingFormalitiesDTO.getEmpid());
+        onboardingFormalitiesEntity.setEmpid(onboardingFormalitiesDTO.getEmpId());
         onboardingFormalitiesEntity.setFirstStartDate(onboardingFormalitiesDTO.getFirstStartDate());
         onboardingFormalitiesEntity.setFirstEndDate(onboardingFormalitiesDTO.getFirstEndDate());
         onboardingFormalitiesEntity.setSecondStartDate(onboardingFormalitiesDTO.getSecondStartDate());
@@ -62,8 +62,5 @@ public class OnboardingFormalitiesServiceImpl implements OnboardingFormalitiesSe
         onboardingFormalitiesEntity.setThirdStartDate(onboardingFormalitiesDTO.getThirdStartDate());
         onboardingFormalitiesEntity.setThirdEndDate(onboardingFormalitiesDTO.getThirdEndDate());
         onboardingFormalitiesEntity.setReason(onboardingFormalitiesDTO.getReason());
-
     }
-
-
 }

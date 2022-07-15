@@ -12,18 +12,17 @@ import java.util.List;
 public class ProfileService {
     @Autowired
     private ProfileRepository profileRepository;
-
     public List<ProfileModel> getProfileDetails() {
         List<ProfileEntity> entitylist = (List<ProfileEntity>)profileRepository.findAll() ;
         List<ProfileModel> profileModelList = new ArrayList<>();
         entitylist.forEach(entity-> {
             ProfileModel profileModel = new ProfileModel();
-            mapEntitytoModel(entity, profileModel);
+            mapEntityToModel(entity, profileModel);
             profileModelList.add(profileModel);
         });
         return profileModelList;
     }
-    private void mapEntitytoModel(ProfileEntity entity, ProfileModel profileModel) {
+    private void mapEntityToModel(ProfileEntity entity, ProfileModel profileModel) {
         profileModel.setProfileSource(entity.getProfileSource());
         profileModel.setProfileId(entity.getProfileId());
     }

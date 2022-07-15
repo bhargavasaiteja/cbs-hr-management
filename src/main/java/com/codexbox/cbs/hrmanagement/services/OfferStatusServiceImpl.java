@@ -15,8 +15,8 @@ public class OfferStatusServiceImpl {
     public OfferStatusRepo offerStatusRepo;
     public List<OfferStatusDTO> getOfferStatusDetails() {
         List<OfferStatusDTO>  list = new ArrayList();
-        List<OfferStatusEntity>offerstatusentity = (List<OfferStatusEntity>) offerStatusRepo.findAll();
-        offerstatusentity.forEach(entity->
+        List<OfferStatusEntity>offerStatusEntity = (List<OfferStatusEntity>) offerStatusRepo.findAll();
+        offerStatusEntity.forEach(entity->
         {
             OfferStatusDTO offerStatusDTO = new OfferStatusDTO();
             mapModelToEntity(offerStatusDTO, entity);
@@ -30,5 +30,4 @@ public class OfferStatusServiceImpl {
         offerStatusDTO.setId(entity.getId());
        offerStatusDTO.setCandidateStatus(entity.getCandidatestatus());
     }
-
 }

@@ -11,12 +11,9 @@ import org.springframework.stereotype.Service;
 public class HrTimeSheetService {
     @Autowired
     private TimesheetRepository timesheetRepository;
-
     public String hrTimeSheetServiceDetails(TimesheetDTO timesheetDTO) {
         String status = "SUCCESSFUL";
         TimeSheetDetails timeSheetDetails = new TimeSheetDetails();
-
-
         mapModelToEntity(timesheetDTO, timeSheetDetails);
         timeSheetDetails= timesheetRepository.save(timeSheetDetails);
 
@@ -25,7 +22,6 @@ public class HrTimeSheetService {
         }
         return status;
     }
-
     public void mapModelToEntity(TimesheetDTO timesheetDTO, TimeSheetDetails timeSheetDetails) {
         timeSheetDetails.setLogInTime(timesheetDTO.getLogInTime());
         timeSheetDetails.setLogOutTime(timesheetDTO.getLogOutTime());

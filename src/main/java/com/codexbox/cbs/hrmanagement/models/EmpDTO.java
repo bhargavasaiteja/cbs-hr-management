@@ -3,8 +3,10 @@ package com.codexbox.cbs.hrmanagement.models;
 import lombok.Data;
 
 import java.util.Date;
+
 @Data
 public class EmpDTO {
+
     private Integer empId;
     private String experience;
     private String personalEmailId;
@@ -23,9 +25,4 @@ public class EmpDTO {
     private String locationAllowance;
     private BankDTO bankDTO;
     private Long bankUserId;
-    public void setBankUserId(BankDTO bankDTO){
-        this.bankUserId = bankDTO.getBankUserId();
-    }
-
-
 }

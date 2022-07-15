@@ -6,6 +6,6 @@ import lombok.Data;
 
 public class DesignationDTO {
     private Integer  id;
-    private String designatitonname;
-
+    private String designatitonName;
 }
+

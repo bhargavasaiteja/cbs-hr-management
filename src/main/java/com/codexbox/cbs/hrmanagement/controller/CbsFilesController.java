@@ -10,9 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/file")
-public class FileDBController {
-
-
+public class CbsFilesController {
     @Autowired
     private CbsFilesService fileDBService;
 
@@ -20,17 +18,15 @@ public class FileDBController {
     public CbsFileUploadEntity uploadFile(@RequestParam("file")MultipartFile file) throws IOException {
 
         return fileDBService.store(file);
-
     }
     @GetMapping("/{id}")
     public CbsFileUploadEntity getFile(@PathVariable String id){
         return fileDBService.getFileById(id);
     }
+
     @GetMapping("/list")
     public List<CbsFileUploadEntity> getFileList(){
         return fileDBService.getFileList();
     }
-
-
 
 }

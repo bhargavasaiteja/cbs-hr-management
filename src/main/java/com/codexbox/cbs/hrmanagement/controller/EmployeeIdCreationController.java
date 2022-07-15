@@ -32,18 +32,14 @@ public class EmployeeIdCreationController {
     private CountryService countryService;
     @Autowired
     private ProjectService projectService;
-
     @Autowired
     CompanyMobileService companyMobileService;
     @Autowired
     private EmpService empService;
 
-
-
-
     @PostMapping("/employee")
     public ResponseEntity<String> saveEmployeeDetails(@RequestBody EmpDTO empDTO) {
-        empDTO.setBankUserId(empDTO.getBankDTO());
+        empDTO.setBankUserId(empDTO.getBankUserId());
         return  new ResponseEntity<>(empService.saveEmployeeDetails(empDTO), HttpStatus.OK);
     }
     @GetMapping("/billingStatus")
@@ -56,7 +52,7 @@ public class EmployeeIdCreationController {
     }
     @GetMapping("/insuranceDetails")
     public ResponseEntity<List<InsuranceDTO>> insuranceController() {
-        return new ResponseEntity(insuranceServices.insuranceServicedetails(), HttpStatus.OK);
+        return new ResponseEntity(insuranceServices.insuranceServiceDetails(), HttpStatus.OK);
     }
     @GetMapping("/bandName")
     public ResponseEntity<List<BandDTO>> bandController(){
@@ -78,11 +74,11 @@ public class EmployeeIdCreationController {
     public ResponseEntity<List<SkillsEntity>> findSkillsById() {
         return new ResponseEntity(  skillsService.getSkillsDetails(), HttpStatus.OK);
     }
-
     @GetMapping("/designation")
     public ResponseEntity<List<DesignationEntity>> findDesignationbyId(){
         return new ResponseEntity(designationService.getDesignationDtails(),HttpStatus.OK);
     }
+
 }
 
 

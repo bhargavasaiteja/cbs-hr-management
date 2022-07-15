@@ -26,10 +26,8 @@ public class CountryService {
         });
         return geoDTOList;
     }
-
     public void mapEntityToGeoDetails(GeoDTO geoDTO, GeoEntity geo) {
         geoDTO.setId(geo.getId());
         geoDTO.setCountryName(geo.getCountryName());
     }
-
 }

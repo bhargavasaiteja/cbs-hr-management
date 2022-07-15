@@ -1,6 +1,5 @@
 package com.codexbox.cbs.hrmanagement.controller;
 
-
 import com.codexbox.cbs.hrmanagement.services.HrTimeSheetService;
 import com.codexbox.cbs.hrmanagement.models.TimesheetDTO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,17 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class HrTimesheetController {
     @Autowired
     private HrTimeSheetService hrTimeSheetService;
-    public TimesheetDTO service;
-
 
     @PostMapping("/timesheet")
     public ResponseEntity<String> TimesheetDTO(@RequestBody TimesheetDTO timesheetDTO) {
-        String status= hrTimeSheetService.hrTimeSheetServiceDetails(timesheetDTO);
-        return new ResponseEntity(status,  HttpStatus.CREATED);
+        String status = hrTimeSheetService.hrTimeSheetServiceDetails(timesheetDTO);
+        return new ResponseEntity(status, HttpStatus.CREATED);
     }
-
-
-
 
 
 }

@@ -5,6 +5,5 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface EmpService {
-
     public String saveEmployeeDetails(EmpDTO empDTO);
 }

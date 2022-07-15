@@ -13,7 +13,6 @@ import java.util.List;
 public class BillingService {
     @Autowired
     public ProjectBillingStatusRepo repo;
-
     public List<BillingStatusDTO> getBillingDetails() {
         List<BillingStatusEntity> entityList = (List<BillingStatusEntity>) repo.findAll();
         List<BillingStatusDTO> billingDTOList = new ArrayList<>();
@@ -24,10 +23,8 @@ public class BillingService {
         });
         return billingDTOList;
     }
-
     private void MapModelToBillingStatusEntity(BillingStatusEntity billingStatusEntity, BillingStatusDTO billingStatusDTO) {
         billingStatusDTO.setProjectId(billingStatusEntity.getProjectId());
         billingStatusDTO.setProjectBillingStatus(billingStatusEntity.getProjectStatus());
     }
-
 }
